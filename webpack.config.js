@@ -1,5 +1,9 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
+const glob = require('glob')
+
+console.log(__dirname)
 
 module.exports = {
   entry: './index.js',
@@ -22,6 +26,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('styles.css')
+    new ExtractTextPlugin('styles.css'),
+    new PurgecssPlugin({
+      paths: glob.sync(`${__dirname}/*`, { nodir: true })
+    })
   ]
 }

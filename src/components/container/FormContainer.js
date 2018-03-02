@@ -1,6 +1,6 @@
+import Input from "../presentational/Input";
 import React, { Component } from "react";
 import ReactDOM from 'react-dom';
-import Input from "../presentational/Input";
 class FormContainer extends Component {
   constructor() {
     super();
@@ -17,7 +17,7 @@ class FormContainer extends Component {
     return (
       <form id="article-form">
         <Input
-          text="SEO title"
+          text="FOOOOOOPO"
           label="seo_title"
           type="text"
           id="seo_title"

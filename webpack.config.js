@@ -3,10 +3,8 @@ const path = require('path')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const glob = require('glob')
 
-console.log(__dirname)
-
-module.exports = {
-  entry: './index.js',
+const css = {
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'styles.css',
@@ -32,3 +30,26 @@ module.exports = {
     })
   ]
 }
+
+const js = {
+  entry: "./src/app.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].js"
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      }
+    ]
+  }
+};
+
+module.exports = [
+     css,js
+];

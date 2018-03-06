@@ -25,9 +25,9 @@ const css = {
   },
   plugins: [
     new ExtractTextPlugin('styles.css'),
-    new PurgecssPlugin({
-      paths: glob.sync(`${__dirname}/*`, { nodir: true })
-    })
+    // new PurgecssPlugin({
+      // paths: glob.sync(`${__dirname}/*`, { nodir: true })
+    // })
   ]
 }
 
@@ -51,5 +51,5 @@ const js = {
 };
 
 module.exports = [
-     css,js
+     js, css
 ];

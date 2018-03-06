@@ -5,32 +5,45 @@ class FormContainer extends Component {
   constructor() {
     super();
     this.state = {
-      seo_title: ""
+      data: ""
     };
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(event) {
-    this.setState({ [event.target.id]: event.target.value });
+    console.log(event.target);
+    const len = event.target.value.length-1
+    if(event.target.value[len] == " "){
+      this.setState({ [event.target.id]: event.target.value.substring(0, len) + "ay " });
+    } else {
+      this.setState({ [event.target.id]: event.target.value});
+    }
+
   }
   render() {
-    const { seo_title } = this.state;
+    const { data } = this.state;
     return (
-      <form id="article-form">
-        <Input
-          text="FOOOOOOPO"
-          label="seo_title"
-          type="text"
-          id="seo_title"
-          value={seo_title}
-          handleChange={this.handleChange}
-        />
-      </form>
+      <div>
+
+
+
+        <form id="article-form">
+          <Input
+            text="Piggify"
+            label="data"
+            type="text"
+            id="data"
+            value={data}
+            handleChange={this.handleChange}
+          />
+          </form>
+          <h1 className="text-5xl text-green font-sans">{data}</h1>
+      </div>
     );
   }
 }
 export default FormContainer;
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  const wrapper = document.getElementById("create-article-form")
+  const wrapper = document.getElementById("react")
   ReactDOM.render(<FormContainer />, wrapper)
 });

@@ -1009,7 +1009,7 @@ var FormContainer = function (_Component) {
     var _this = _possibleConstructorReturn(this, (FormContainer.__proto__ || Object.getPrototypeOf(FormContainer)).call(this));
 
     _this.state = {
-      seo_title: ""
+      data: ""
     };
     _this.handleChange = _this.handleChange.bind(_this);
     return _this;
@@ -1018,24 +1018,39 @@ var FormContainer = function (_Component) {
   _createClass(FormContainer, [{
     key: "handleChange",
     value: function handleChange(event) {
-      this.setState(_defineProperty({}, event.target.id, event.target.value));
+      console.log(event.target);
+      var len = event.target.value.length - 1;
+      if (event.target.value[len] == " ") {
+        this.setState(_defineProperty({}, event.target.id, event.target.value.substring(0, len) + "ay "));
+      } else {
+        this.setState(_defineProperty({}, event.target.id, event.target.value));
+      }
     }
   }, {
     key: "render",
     value: function render() {
-      var seo_title = this.state.seo_title;
+      var data = this.state.data;
 
       return _react2.default.createElement(
-        "form",
-        { id: "article-form" },
-        _react2.default.createElement(_Input2.default, {
-          text: "FOOOOOOPO",
-          label: "seo_title",
-          type: "text",
-          id: "seo_title",
-          value: seo_title,
-          handleChange: this.handleChange
-        })
+        "div",
+        null,
+        _react2.default.createElement(
+          "form",
+          { id: "article-form" },
+          _react2.default.createElement(_Input2.default, {
+            text: "Piggify",
+            label: "data",
+            type: "text",
+            id: "data",
+            value: data,
+            handleChange: this.handleChange
+          })
+        ),
+        _react2.default.createElement(
+          "h1",
+          { className: "text-5xl text-green font-sans" },
+          data
+        )
       );
     }
   }]);
@@ -1047,7 +1062,7 @@ exports.default = FormContainer;
 
 
 document.addEventListener("DOMContentLoaded", function (event) {
-  var wrapper = document.getElementById("create-article-form");
+  var wrapper = document.getElementById("react");
   _reactDom2.default.render(_react2.default.createElement(FormContainer, null), wrapper);
 });
 
@@ -1081,7 +1096,7 @@ var Input = function Input(_ref) {
       handleChange = _ref.handleChange;
   return _react2.default.createElement(
     "div",
-    { className: "form-group" },
+    { className: "form-groug text-red" },
     _react2.default.createElement(
       "label",
       { htmlFor: label },

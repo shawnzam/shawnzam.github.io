@@ -10,7 +10,6 @@ class FormContainer extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(event) {
-    console.log(event.target);
     const len = event.target.value.length-1
     if(event.target.value[len] == " "){
       this.setState({ [event.target.id]: event.target.value.substring(0, len) + "ay " });

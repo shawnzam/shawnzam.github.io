@@ -1018,7 +1018,6 @@ var FormContainer = function (_Component) {
   _createClass(FormContainer, [{
     key: "handleChange",
     value: function handleChange(event) {
-      console.log(event.target);
       var len = event.target.value.length - 1;
       if (event.target.value[len] == " ") {
         this.setState(_defineProperty({}, event.target.id, event.target.value.substring(0, len) + "ay "));

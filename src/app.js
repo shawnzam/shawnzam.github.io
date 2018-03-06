@@ -1,4 +1,3 @@
-import FormContainer from "./components/container/FormContainer";
+import FormContainer from './components/container/FormContainer'
 
-
-
+export default FormContainer

@@ -959,11 +959,17 @@ module.exports = focusNode;
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _FormContainer = __webpack_require__(16);
 
 var _FormContainer2 = _interopRequireDefault(_FormContainer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _FormContainer2.default;
 
 /***/ }),
 /* 16 */
@@ -973,7 +979,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -1001,68 +1007,68 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var FormContainer = function (_Component) {
-  _inherits(FormContainer, _Component);
+	_inherits(FormContainer, _Component);
 
-  function FormContainer() {
-    _classCallCheck(this, FormContainer);
+	function FormContainer() {
+		_classCallCheck(this, FormContainer);
 
-    var _this = _possibleConstructorReturn(this, (FormContainer.__proto__ || Object.getPrototypeOf(FormContainer)).call(this));
+		var _this = _possibleConstructorReturn(this, (FormContainer.__proto__ || Object.getPrototypeOf(FormContainer)).call(this));
 
-    _this.state = {
-      data: ""
-    };
-    _this.handleChange = _this.handleChange.bind(_this);
-    return _this;
-  }
+		_this.state = {
+			data: ''
+		};
+		_this.handleChange = _this.handleChange.bind(_this);
+		return _this;
+	}
 
-  _createClass(FormContainer, [{
-    key: "handleChange",
-    value: function handleChange(event) {
-      var len = event.target.value.length - 1;
-      if (event.target.value[len] == " ") {
-        this.setState(_defineProperty({}, event.target.id, event.target.value.substring(0, len) + "ay "));
-      } else {
-        this.setState(_defineProperty({}, event.target.id, event.target.value));
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var data = this.state.data;
+	_createClass(FormContainer, [{
+		key: 'handleChange',
+		value: function handleChange(event) {
+			var len = event.target.value.length - 1;
+			if (event.target.value[len] === ' ') {
+				this.setState(_defineProperty({}, event.target.id, event.target.value.substring(0, len) + 'ay '));
+			} else {
+				this.setState(_defineProperty({}, event.target.id, event.target.value));
+			}
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			var data = this.state.data;
 
-      return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-          "form",
-          { id: "article-form" },
-          _react2.default.createElement(_Input2.default, {
-            text: "Piggify",
-            label: "data",
-            type: "text",
-            id: "data",
-            value: data,
-            handleChange: this.handleChange
-          })
-        ),
-        _react2.default.createElement(
-          "h1",
-          { className: "text-5xl text-green font-sans" },
-          data
-        )
-      );
-    }
-  }]);
+			return _react2.default.createElement(
+				'div',
+				null,
+				_react2.default.createElement(
+					'form',
+					{ id: 'article-form' },
+					_react2.default.createElement(_Input2.default, {
+						text: 'Piggify',
+						label: 'data',
+						type: 'text',
+						id: 'data',
+						value: data,
+						handleChange: this.handleChange
+					})
+				),
+				_react2.default.createElement(
+					'h1',
+					{ className: 'text-5xl text-green font-sans' },
+					data
+				)
+			);
+		}
+	}]);
 
-  return FormContainer;
+	return FormContainer;
 }(_react.Component);
 
 exports.default = FormContainer;
 
 
-document.addEventListener("DOMContentLoaded", function (event) {
-  var wrapper = document.getElementById("react");
-  _reactDom2.default.render(_react2.default.createElement(FormContainer, null), wrapper);
+document.addEventListener('DOMContentLoaded', function () {
+	var wrapper = document.getElementById('react');
+	_reactDom2.default.render(_react2.default.createElement(FormContainer, null), wrapper);
 });
 
 /***/ }),
@@ -1073,7 +1079,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _react = __webpack_require__(4);
@@ -1087,37 +1093,37 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Input = function Input(_ref) {
-  var label = _ref.label,
-      text = _ref.text,
-      type = _ref.type,
-      id = _ref.id,
-      value = _ref.value,
-      handleChange = _ref.handleChange;
-  return _react2.default.createElement(
-    "div",
-    { className: "form-groug text-red" },
-    _react2.default.createElement(
-      "label",
-      { htmlFor: label },
-      text
-    ),
-    _react2.default.createElement("input", {
-      type: type,
-      className: "form-control border rounded w-full py-2 px-3 text-grey-darker",
-      id: id,
-      value: value,
-      onChange: handleChange,
-      required: true
-    })
-  );
+	var label = _ref.label,
+	    text = _ref.text,
+	    type = _ref.type,
+	    id = _ref.id,
+	    value = _ref.value,
+	    handleChange = _ref.handleChange;
+	return _react2.default.createElement(
+		'div',
+		{ className: 'form-groug text-red' },
+		_react2.default.createElement(
+			'label',
+			{ htmlFor: label },
+			text
+		),
+		_react2.default.createElement('input', {
+			type: type,
+			className: 'form-control border rounded w-full py-2 px-3 text-grey-darker',
+			id: id,
+			value: value,
+			onChange: handleChange,
+			required: true
+		})
+	);
 };
 Input.propTypes = {
-  label: _propTypes2.default.string.isRequired,
-  text: _propTypes2.default.string.isRequired,
-  type: _propTypes2.default.string.isRequired,
-  id: _propTypes2.default.string.isRequired,
-  value: _propTypes2.default.string.isRequired,
-  handleChange: _propTypes2.default.func.isRequired
+	label: _propTypes2.default.string.isRequired,
+	text: _propTypes2.default.string.isRequired,
+	type: _propTypes2.default.string.isRequired,
+	id: _propTypes2.default.string.isRequired,
+	value: _propTypes2.default.string.isRequired,
+	handleChange: _propTypes2.default.func.isRequired
 };
 exports.default = Input;
 

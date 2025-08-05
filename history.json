@@ -1,0 +1,1450 @@
+[
+    {
+        "date": "January 1",
+        "event": "The first version of Unix operating system is released by Ken Thompson and Dennis Ritchie at Bell Labs in 1971."
+    },
+    {
+        "date": "January 2",
+        "event": "The first computer virus, known as the 'Creeper,' is created in 1971 by Bob Thomas."
+    },
+    {
+        "date": "January 3",
+        "event": "On this day in 1983, the Domain Name System (DNS) was introduced, making it easier to navigate the Internet."
+    },
+    {
+        "date": "January 4",
+        "event": "In 1981, IBM announced the development of the IBM Personal Computer, paving the way for personal computing."
+    },
+    {
+        "date": "January 5",
+        "event": "The first ever computer bug was recorded in 1947 by Grace Hopper, where a moth was found inside a computer."
+    },
+    {
+        "date": "January 6",
+        "event": "In 1989, the first website was created by Tim Berners-Lee, leading to the birth of the World Wide Web."
+    },
+    {
+        "date": "January 7",
+        "event": "The first personal computer, the Altair 8800, was announced by MITS in 1975."
+    },
+    {
+        "date": "January 8",
+        "event": "In 1959, the first computer programming language, Fortran, was officially released to the public."
+    },
+    {
+        "date": "January 9",
+        "event": "In 2007, Apple launched the first iPhone, revolutionizing mobile computing."
+    },
+    {
+        "date": "January 10",
+        "event": "The Apple Macintosh was announced by Steve Jobs in 1984, featuring a graphical user interface."
+    },
+    {
+        "date": "January 11",
+        "event": "In 1999, the first version of the Linux kernel was released by Linus Torvalds."
+    },
+    {
+        "date": "January 12",
+        "event": "The first commercial minicomputer, the PDP-1, was released by Digital Equipment Corporation in 1960."
+    },
+    {
+        "date": "January 13",
+        "event": "In 1995, Sun Microsystems released the Java programming language, shaping modern web development."
+    },
+    {
+        "date": "January 14",
+        "event": "In 1982, the first compact disc player (CDP) was released in Japan, marking the rise of digital audio."
+    },
+    {
+        "date": "January 15",
+        "event": "The first computer mouse was patented by Douglas Engelbart in 1970."
+    },
+    {
+        "date": "January 16",
+        "event": "In 1994, Netscape Communications released the Netscape Navigator web browser, popularizing Internet browsing."
+    },
+    {
+        "date": "January 17",
+        "event": "In 1966, the first high-speed computer memory system was introduced by IBM."
+    },
+    {
+        "date": "January 18",
+        "event": "In 1978, the first handheld scientific calculator, the HP-35, was released."
+    },
+    {
+        "date": "January 19",
+        "event": "The first Apple II personal computers were sold in 1977."
+    },
+    {
+        "date": "January 20",
+        "event": "In 1999, the first commercial version of the wireless protocol Wi-Fi was introduced."
+    },
+    {
+        "date": "January 21",
+        "event": "In 1986, the first 'Supercomputer' to be used commercially was unveiled by Cray Research."
+    },
+    {
+        "date": "January 22",
+        "event": "In 1993, the Mosaic web browser was released, laying the groundwork for future web browsers."
+    },
+    {
+        "date": "January 23",
+        "event": "In 1954, IBM introduced the first computer with an integrated circuit, the IBM 701."
+    },
+    {
+        "date": "January 24",
+        "event": "The first portable computer, the Osborne 1, was introduced in 1981."
+    },
+    {
+        "date": "January 25",
+        "event": "In 1991, the first version of the Linux kernel was released, with Linus Torvalds at the helm."
+    },
+    {
+        "date": "January 26",
+        "event": "The first commercial home video game console, the Magnavox Odyssey, was released in 1972."
+    },
+    {
+        "date": "January 27",
+        "event": "In 1996, the first version of the Java programming language for mobile applications was released."
+    },
+    {
+        "date": "January 28",
+        "event": "In 1987, the first IBM personal computer with an Intel 80386 processor was introduced."
+    },
+    {
+        "date": "January 29",
+        "event": "In 2004, Google launched Gmail, a free email service that revolutionized online communication."
+    },
+    {
+        "date": "January 30",
+        "event": "In 1988, the first version of Microsoft Excel for Windows was released."
+    },
+    {
+        "date": "January 31",
+        "event": "In 1993, the first version of the Netscape Navigator web browser was released."
+    },
+    {
+        "date": "February 1",
+        "event": "In 1992, the first ever text message (SMS) was sent in the UK by Neil Papworth."
+    },
+    {
+        "date": "February 2",
+        "event": "In 1956, IBM launched the IBM 305 RAMAC, the first computer with a hard disk drive."
+    },
+    {
+        "date": "February 3",
+        "event": "In 1969, ARPANET (the precursor to the Internet) was officially created."
+    },
+    {
+        "date": "February 4",
+        "event": "In 1980, the first version of the Apple III was introduced by Apple."
+    },
+    {
+        "date": "February 5",
+        "event": "In 1983, the first Apple Lisa computer, which featured a graphical user interface, was introduced."
+    },
+    {
+        "date": "February 6",
+        "event": "In 1994, Yahoo! was founded by Jerry Yang and David Filo, becoming one of the first major web directories."
+    },
+    {
+        "date": "February 7",
+        "event": "The first ever computer 'bug' was found in 1947, when a moth caused a malfunction in the Harvard Mark II computer."
+    },
+    {
+        "date": "February 8",
+        "event": "In 1983, Microsoft released the first version of Word for Windows, paving the way for office productivity software."
+    },
+    {
+        "date": "February 9",
+        "event": "The first hand-held calculator, the HP-35, was released by Hewlett-Packard in 1972."
+    },
+    {
+        "date": "February 10",
+        "event": "In 1967, the first program to simulate human intelligence (ELIZA) was written by Joseph Weizenbaum."
+    },
+    {
+        "date": "February 11",
+        "event": "In 1986, the first Supercomputer to be used commercially was unveiled by Cray Research."
+    },
+    {
+        "date": "February 12",
+        "event": "In 2000, the first version of the PHP scripting language was released."
+    },
+    {
+        "date": "February 13",
+        "event": "In 1993, the first version of the popular 3D graphics software, AutoCAD, was released by Autodesk."
+    },
+    {
+        "date": "February 14",
+        "event": "In 2004, Google launched Gmail, a free email service that revolutionized online communication."
+    },
+    {
+        "date": "February 15",
+        "event": "In 1983, the first Microsoft Windows 1.0 was released, marking the beginning of their graphical operating system."
+    },
+    {
+        "date": "February 16",
+        "event": "In 1981, the Osborne 1, the first portable computer, was introduced."
+    },
+    {
+        "date": "February 17",
+        "event": "In 1996, the first version of the search engine, Yahoo!, was launched by Jerry Yang and David Filo."
+    },
+    {
+        "date": "February 18",
+        "event": "In 1959, the first commercial computer programming language, FORTRAN, was officially released."
+    },
+    {
+        "date": "February 19",
+        "event": "In 1992, the first successful text message was sent via SMS in the UK by Neil Papworth."
+    },
+    {
+        "date": "February 20",
+        "event": "In 1989, Tim Berners-Lee proposed the concept of the World Wide Web at CERN."
+    },
+    {
+        "date": "February 21",
+        "event": "In 1993, Mosaic, the first popular web browser, was released, bringing the internet to the masses."
+    },
+    {
+        "date": "February 22",
+        "event": "In 1999, the Microsoft Antitrust case began, shaping the future of technology regulation."
+    },
+    {
+        "date": "February 23",
+        "event": "In 1995, JavaScript was created by Brendan Eich, making interactive websites possible."
+    },
+    {
+        "date": "February 24",
+        "event": "In 1984, Apple introduced the Macintosh, the first personal computer with a graphical user interface (GUI)."
+    },
+    {
+        "date": "February 25",
+        "event": "In 2005, YouTube was founded by Steve Chen, Chad Hurley, and Jawed Karim."
+    },
+    {
+        "date": "February 26",
+        "event": "In 1998, Google began to offer pay-per-click advertising, a model that revolutionized online business."
+    },
+    {
+        "date": "February 27",
+        "event": "In 1993, the Intel Pentium processor was introduced, bringing performance to the forefront of personal computers."
+    },
+    {
+        "date": "February 28",
+        "event": "In 1994, the first 64-bit RISC processor, the DEC Alpha, was released by Digital Equipment Corporation."
+    },
+    {
+        "date": "March 1",
+        "event": "In 1995, Microsoft released Windows 95, one of the most significant versions of Windows."
+    },
+    {
+        "date": "March 2",
+        "event": "In 1965, Gordon Moore, co-founder of Intel, made his famous prediction of 'Moore's Law' for the first time."
+    },
+    {
+        "date": "March 3",
+        "event": "In 1994, the first version of Netscape Navigator was released, marking the beginning of the browser wars."
+    },
+    {
+        "date": "March 4",
+        "event": "In 1969, the first successful transmission over ARPANET (the precursor to the internet) occurred."
+    },
+    {
+        "date": "March 5",
+        "event": "In 1997, the IBM Deep Blue computer defeated world chess champion Garry Kasparov."
+    },
+    {
+        "date": "March 6",
+        "event": "In 2001, Wikipedia was launched by Jimmy Wales and Larry Sanger."
+    },
+    {
+        "date": "March 7",
+        "event": "In 1969, the first integrated circuit, the Microchip, was successfully tested by Jack Kilby of Texas Instruments."
+    },
+    {
+        "date": "March 8",
+        "event": "In 1983, Microsoft Word for Windows was released as part of their suite of office software."
+    },
+    {
+        "date": "March 9",
+        "event": "In 1993, the first version of the popular web browser Netscape Navigator was released."
+    },
+    {
+        "date": "March 10",
+        "event": "In 2000, the first ever smartphone (the Nokia 7110) was released with WAP technology for mobile web browsing."
+    },
+    {
+        "date": "March 11",
+        "event": "In 1993, the first version of the Intel Pentium processor was released, marking a new era in computing power."
+    },
+    {
+        "date": "March 12",
+        "event": "In 2008, Yahoo! announced that it was abandoning its acquisition of Microsoft, which had been on the table for some time."
+    },
+    {
+        "date": "March 13",
+        "event": "In 1986, the Cray-2 supercomputer was released, providing massive computational power."
+    },
+    {
+        "date": "March 14",
+        "event": "In 1991, the first version of Linux, the open-source operating system, was released by Linus Torvalds."
+    },
+    {
+        "date": "March 15",
+        "event": "In 2005, YouTube was founded by three former PayPal employees, Steve Chen, Chad Hurley, and Jawed Karim."
+    },
+    {
+        "date": "March 16",
+        "event": "In 1997, the first ever online shopping site, Amazon, was launched by Jeff Bezos."
+    },
+    {
+        "date": "March 17",
+        "event": "In 1973, the first commercial email system was introduced, changing communication forever."
+    },
+    {
+        "date": "March 18",
+        "event": "In 1995, the first publicly available version of JavaScript was introduced."
+    },
+    {
+        "date": "March 19",
+        "event": "In 1986, the first IBM PC-compatible laptop, the Compaq Portable, was introduced."
+    },
+    {
+        "date": "March 20",
+        "event": "In 1994, Yahoo! was founded by Jerry Yang and David Filo, becoming one of the first major internet directories."
+    },
+    {
+        "date": "March 21",
+        "event": "In 1985, Windows 1.0 was released by Microsoft, offering a graphical user interface for the first time."
+    },
+    {
+        "date": "March 22",
+        "event": "In 1993, the first 3D video game, Doom, was released and became a massive success."
+    },
+    {
+        "date": "March 23",
+        "event": "In 1987, IBM announced the first personal computer compatible with a Macintosh operating system."
+    },
+    {
+        "date": "March 24",
+        "event": "In 2003, Google acquired the Blogger platform, making it a major player in the blogosphere."
+    },
+    {
+        "date": "March 25",
+        "event": "In 1999, Linux 2.2 was released, making the open-source operating system even more popular."
+    },
+    {
+        "date": "March 26",
+        "event": "In 1991, the first graphical web browser, Mosaic, was launched, sparking the internet revolution."
+    },
+    {
+        "date": "March 27",
+        "event": "In 1984, the Apple Macintosh was released to the public, bringing GUI to personal computing."
+    },
+    {
+        "date": "March 28",
+        "event": "In 1991, the first ever email marketing campaign was sent by the company Digital Equipment Corporation."
+    },
+    {
+        "date": "April 1",
+        "event": "In 2004, Google announced Gmail with 1 GB of storage, leading many to believe it was an April Fools' joke."
+    },
+    {
+        "date": "April 2",
+        "event": "In 1987, IBM introduced the PS/2 line of personal computers along with the VGA display standard."
+    },
+    {
+        "date": "April 3",
+        "event": "In 2010, Apple released the first iPad, launching the modern tablet computing era."
+    },
+    {
+        "date": "April 4",
+        "event": "In 1975, Bill Gates and Paul Allen founded Microsoft in Albuquerque, New Mexico."
+    },
+    {
+        "date": "April 5",
+        "event": "In 1992, the Windows 3.1 operating system was released, becoming widely popular in homes and offices."
+    },
+    {
+        "date": "April 6",
+        "event": "In 1998, the Mozilla project was announced by Netscape to develop an open-source browser."
+    },
+    {
+        "date": "April 7",
+        "event": "In 1969, the RFC 1 document was published, launching the Request for Comments series that underpins the Internet."
+    },
+    {
+        "date": "April 8",
+        "event": "In 1976, Apple Computer Company was formed by Steve Jobs, Steve Wozniak, and Ronald Wayne."
+    },
+    {
+        "date": "April 9",
+        "event": "In 1983, the Lotus Development Corporation released Lotus 1-2-3, a revolutionary spreadsheet program."
+    },
+    {
+        "date": "April 10",
+        "event": "In 1995, the Java programming language was officially introduced by Sun Microsystems."
+    },
+    {
+        "date": "April 11",
+        "event": "In 1976, the Apple I computer was released and sold as a fully assembled circuit board."
+    },
+    {
+        "date": "April 12",
+        "event": "In 1961, IBM introduced the 1401 Data Processing System, which became one of the most popular computers of the 1960s."
+    },
+    {
+        "date": "April 13",
+        "event": "In 1984, Apple released the Apple IIc, a portable version of its popular Apple II computer."
+    },
+    {
+        "date": "April 14",
+        "event": "In 1956, MIT researchers demonstrated the first transistorized computer, the TX-0."
+    },
+    {
+        "date": "April 15",
+        "event": "In 1985, Intel released the 80386 processor, offering true 32-bit computing."
+    },
+    {
+        "date": "April 16",
+        "event": "In 2003, Apple launched the iTunes Music Store, changing the way people bought and listened to music."
+    },
+    {
+        "date": "April 17",
+        "event": "In 1973, IBM introduced the Winchester disk drive, a breakthrough in hard drive technology."
+    },
+    {
+        "date": "April 18",
+        "event": "In 2002, the Mozilla Foundation was established to support open-source browser development."
+    },
+    {
+        "date": "April 19",
+        "event": "In 1982, the Sinclair ZX Spectrum was released, sparking a home computing boom in the UK."
+    },
+    {
+        "date": "April 20",
+        "event": "In 1998, Apple introduced the iMac, a colorful all-in-one computer designed by Jony Ive."
+    },
+    {
+        "date": "April 21",
+        "event": "In 1989, Nintendo released the Game Boy, launching the era of handheld gaming."
+    },
+    {
+        "date": "April 22",
+        "event": "In 1993, the first release of the Mosaic web browser for Windows took place."
+    },
+    {
+        "date": "April 23",
+        "event": "In 2005, the first video was uploaded to YouTube by co-founder Jawed Karim."
+    },
+    {
+        "date": "April 24",
+        "event": "In 1990, the Hubble Space Telescope was launched, enabled by significant computing advancements."
+    },
+    {
+        "date": "April 25",
+        "event": "In 1985, AT&T introduced the Unix System V Release 3, a key step in Unix standardization."
+    },
+    {
+        "date": "April 26",
+        "event": "In 1991, the first webcam concept was created at Cambridge University to monitor a coffee pot."
+    },
+    {
+        "date": "April 27",
+        "event": "In 1981, Xerox released the Xerox Star, the first commercial system with a GUI."
+    },
+    {
+        "date": "April 28",
+        "event": "In 2003, Apple launched the Power Mac G5, the first 64-bit personal computer."
+    },
+    {
+        "date": "April 29",
+        "event": "In 1994, CERN officially released the World Wide Web into the public domain."
+    },
+    {
+        "date": "April 30",
+        "event": "In 1993, the World Wide Web was made freely available to the public by CERN."
+    },
+    {
+        "date": "May 1",
+        "event": "In 1964, Dartmouth College professors John Kemeny and Thomas Kurtz introduced BASIC, a beginner-friendly programming language."
+    },
+    {
+        "date": "May 2",
+        "event": "In 1983, Microsoft announced its intention to create a graphical user interface, which would become Windows."
+    },
+    {
+        "date": "May 3",
+        "event": "In 1978, the first spam email was sent to 600 people on ARPANET."
+    },
+    {
+        "date": "May 4",
+        "event": "In 1984, IBM introduced the PC/AT with the Intel 80286 processor, improving computing speed and multitasking."
+    },
+    {
+        "date": "May 5",
+        "event": "In 1988, the Morris Worm led to the formation of CERT, the first response team for internet security threats."
+    },
+    {
+        "date": "May 6",
+        "event": "In 1997, IBM's Deep Blue defeated Garry Kasparov in a chess match, a landmark in AI history."
+    },
+    {
+        "date": "May 7",
+        "event": "In 1954, the IBM 701 was delivered to Los Alamos Scientific Laboratory, one of the first mass-produced computers."
+    },
+    {
+        "date": "May 8",
+        "event": "In 1999, the Melissa virus spread through Microsoft Word documents, causing widespread damage."
+    },
+    {
+        "date": "May 9",
+        "event": "In 1996, WebTV launched as an internet access product for televisions, later acquired by Microsoft."
+    },
+    {
+        "date": "May 10",
+        "event": "In 2001, the Code Red worm exploited vulnerabilities in Microsoft IIS web servers."
+    },
+    {
+        "date": "May 11",
+        "event": "In 1997, Google registered its domain name, beginning its journey to dominate the web."
+    },
+    {
+        "date": "May 12",
+        "event": "In 2017, the WannaCry ransomware attack began, affecting systems in over 150 countries."
+    },
+    {
+        "date": "May 13",
+        "event": "In 2005, Adobe acquired Macromedia, adding Flash and Dreamweaver to its product line."
+    },
+    {
+        "date": "May 14",
+        "event": "In 1986, Microsoft released its first version of Excel for Macintosh."
+    },
+    {
+        "date": "May 15",
+        "event": "In 1997, Sun Microsystems released Java 1.1, a major step forward in cross-platform computing."
+    },
+    {
+        "date": "May 16",
+        "event": "In 1960, the first laser was demonstrated, later used in optical storage and computing."
+    },
+    {
+        "date": "May 17",
+        "event": "In 1991, the first version of the Linux kernel was announced by Linus Torvalds on Usenet."
+    },
+    {
+        "date": "May 18",
+        "event": "In 1998, the United States Department of Justice and 20 states filed an antitrust case against Microsoft."
+    },
+    {
+        "date": "May 19",
+        "event": "In 2006, Twitter was publicly launched, revolutionizing microblogging and online communication."
+    },
+    {
+        "date": "May 20",
+        "event": "In 1983, the GNU Project was launched by Richard Stallman to develop a free Unix-like OS."
+    },
+    {
+        "date": "May 21",
+        "event": "In 1990, Microsoft released Windows 3.0, a major commercial success."
+    },
+    {
+        "date": "May 22",
+        "event": "In 1980, Pac-Man was released by Namco, becoming one of the most iconic games in computing history."
+    },
+    {
+        "date": "May 23",
+        "event": "In 2001, Apple opened its first retail stores in Virginia and California."
+    },
+    {
+        "date": "May 24",
+        "event": "In 1972, Magnavox released the Odyssey, the first commercial home video game console."
+    },
+    {
+        "date": "May 25",
+        "event": "In 1977, Star Wars premiered, inspiring generations of future computer scientists and technologists."
+    },
+    {
+        "date": "May 26",
+        "event": "In 1995, Java was officially launched by Sun Microsystems."
+    },
+    {
+        "date": "May 27",
+        "event": "In 1999, the soap opera-like legal saga between Microsoft and the US government continued with antitrust rulings."
+    },
+    {
+        "date": "May 28",
+        "event": "In 1983, Lotus 1-2-3 debuted, revolutionizing business spreadsheet software."
+    },
+    {
+        "date": "May 29",
+        "event": "In 1994, the Bluetooth Special Interest Group was founded, setting the stage for wireless device communication."
+    },
+    {
+        "date": "May 30",
+        "event": "In 1987, IBM introduced the PS/2, redefining the PC market with VGA and the 3.5-inch floppy disk."
+    },
+    {
+        "date": "May 31",
+        "event": "In 2003, LinkedIn was launched, becoming a leading social network for professionals."
+    },
+    {
+        "date": "June 1",
+        "event": "In 1999, Napster was released, transforming how people shared and consumed digital music."
+    },
+    {
+        "date": "June 2",
+        "event": "In 1953, the IBM 701, IBM's first commercial scientific computer, was officially introduced."
+    },
+    {
+        "date": "June 3",
+        "event": "In 1977, Apple Computer released the Apple II, one of the first successful mass-market PCs."
+    },
+    {
+        "date": "June 4",
+        "event": "In 1984, Tetris was created by Alexey Pajitnov at the Soviet Academy of Sciences."
+    },
+    {
+        "date": "June 5",
+        "event": "In 2007, Apple announced the release date for the first iPhone, setting the stage for smartphones."
+    },
+    {
+        "date": "June 6",
+        "event": "In 1995, PHP was publicly released by Rasmus Lerdorf, enabling dynamic web development."
+    },
+    {
+        "date": "June 7",
+        "event": "In 1983, Microsoft introduced Word for DOS, a major step in word processing."
+    },
+    {
+        "date": "June 8",
+        "event": "In 1978, Intel released the 8086 processor, which became the basis for the x86 architecture."
+    },
+    {
+        "date": "June 9",
+        "event": "In 1993, Adobe Acrobat and the PDF file format were officially launched."
+    },
+    {
+        "date": "June 10",
+        "event": "In 2003, the Safari web browser was released for Mac OS X by Apple."
+    },
+    {
+        "date": "June 11",
+        "event": "In 1998, Microsoft released Windows 98, a consumer-oriented operating system update."
+    },
+    {
+        "date": "June 12",
+        "event": "In 1994, W3C was founded at MIT to lead the development of web standards."
+    },
+    {
+        "date": "June 13",
+        "event": "In 1980, Microsoft signed a deal with IBM to provide an operating system, which became MS-DOS."
+    },
+    {
+        "date": "June 14",
+        "event": "In 2007, the iPhone entered mass production, transforming the mobile phone industry."
+    },
+    {
+        "date": "June 15",
+        "event": "In 1993, Intel released the Pentium processor, marking a leap in PC processing power."
+    },
+    {
+        "date": "June 16",
+        "event": "In 1977, Apple shipped its first Apple II units to customers."
+    },
+    {
+        "date": "June 17",
+        "event": "In 1997, the Webby Awards were held for the first time, recognizing excellence on the internet."
+    },
+    {
+        "date": "June 18",
+        "event": "In 1982, the Commodore 64 was unveiled, becoming one of the best-selling computers of all time."
+    },
+    {
+        "date": "June 19",
+        "event": "In 2000, Red Hat Linux 7.0 was released, advancing the adoption of open-source operating systems."
+    },
+    {
+        "date": "June 20",
+        "event": "In 1991, Microsoft released MS-DOS 5.0 with a full-screen editor and improved memory management."
+    },
+    {
+        "date": "June 21",
+        "event": "In 2004, Firefox 0.9 was released, gaining traction as an alternative to Internet Explorer."
+    },
+    {
+        "date": "June 22",
+        "event": "In 1948, the Manchester Small-Scale Experimental Machine ran its first program, the first stored-program computer."
+    },
+    {
+        "date": "June 23",
+        "event": "In 1912, Alan Turing was born, whose ideas laid the foundation of modern computing and AI."
+    },
+    {
+        "date": "June 24",
+        "event": "In 1987, IBM introduced the PS/2 Model 30, expanding its personal computing line."
+    },
+    {
+        "date": "June 25",
+        "event": "In 1998, Microsoft was officially charged with violating antitrust laws by the US Department of Justice."
+    },
+    {
+        "date": "June 26",
+        "event": "In 1974, the UPC barcode was scanned for the first time, transforming inventory management and retail."
+    },
+    {
+        "date": "June 27",
+        "event": "In 1972, Nolan Bushnell founded Atari, launching the video game industry."
+    },
+    {
+        "date": "June 28",
+        "event": "In 1993, Microsoft introduced Windows NT, their first 32-bit operating system for businesses."
+    },
+    {
+        "date": "June 29",
+        "event": "In 2007, Apple released the first iPhone, changing the landscape of mobile computing."
+    },
+    {
+        "date": "June 30",
+        "event": "In 2005, Apple announced the transition from PowerPC to Intel processors for Mac computers."
+    },
+    {
+        "date": "July 1",
+        "event": "In 1979, Sony introduced the Walkman, influencing portable media and digital music design."
+    },
+    {
+        "date": "July 2",
+        "event": "In 1994, Amazon was founded by Jeff Bezos as an online bookstore."
+    },
+    {
+        "date": "July 3",
+        "event": "In 1980, Steve Ballmer joined Microsoft as its first business manager."
+    },
+    {
+        "date": "July 4",
+        "event": "In 1956, MIT's Whirlwind became one of the first real-time computers with graphical output."
+    },
+    {
+        "date": "July 5",
+        "event": "In 1996, Dolly the sheep was cloned, using advanced computing for genetic modeling and analysis."
+    },
+    {
+        "date": "July 6",
+        "event": "In 1995, the MP3 file format was patented, setting the stage for digital music distribution."
+    },
+    {
+        "date": "July 7",
+        "event": "In 2000, Napster was ordered to shut down its service due to copyright infringement."
+    },
+    {
+        "date": "July 8",
+        "event": "In 1993, IBM released OS/2 Warp 3, an ambitious but ultimately unsuccessful operating system."
+    },
+    {
+        "date": "July 9",
+        "event": "In 1981, Microsoft bought the rights to 86-DOS, the basis for MS-DOS."
+    },
+    {
+        "date": "July 10",
+        "event": "In 1962, Telstar, the first active communications satellite, was launched into orbit."
+    },
+    {
+        "date": "July 11",
+        "event": "In 2008, Apple launched the App Store, creating a new mobile software economy."
+    },
+    {
+        "date": "July 12",
+        "event": "In 1984, IBM released PC-DOS 3.0 to support its new AT computers."
+    },
+    {
+        "date": "July 13",
+        "event": "In 2001, Symbian OS was released, powering early smartphones before Android and iOS."
+    },
+    {
+        "date": "July 14",
+        "event": "In 2004, Mozilla Firefox 0.9 was released, gaining popularity as a secure web browser."
+    },
+    {
+        "date": "July 15",
+        "event": "In 2015, Amazon launched Prime Day, driving massive online sales using advanced cloud infrastructure."
+    },
+    {
+        "date": "July 16",
+        "event": "In 1969, Apollo 11 launched with onboard computers far less powerful than modern smartphones."
+    },
+    {
+        "date": "July 17",
+        "event": "In 2002, the .us domain was opened to the general public for registration."
+    },
+    {
+        "date": "July 18",
+        "event": "In 1968, Intel was founded by Robert Noyce and Gordon Moore."
+    },
+    {
+        "date": "July 19",
+        "event": "In 1993, the first version of Adobe PDF Reader was released, standardizing electronic documents."
+    },
+    {
+        "date": "July 20",
+        "event": "In 1969, humans landed on the Moon with guidance from computers aboard the Apollo Lunar Module."
+    },
+    {
+        "date": "July 21",
+        "event": "In 2005, Google launched Google Earth to the public."
+    },
+    {
+        "date": "July 22",
+        "event": "In 2004, Mark Shuttleworth announced Ubuntu, a Linux distro focused on usability and community."
+    },
+    {
+        "date": "July 23",
+        "event": "In 1995, the JavaScript programming language was officially introduced by Netscape."
+    },
+    {
+        "date": "July 24",
+        "event": "In 1998, the first version of KDE, a desktop environment for Linux, was released."
+    },
+    {
+        "date": "July 25",
+        "event": "In 2000, Bluetooth 1.0 specification was finalized, enabling short-range wireless communication."
+    },
+    {
+        "date": "July 26",
+        "event": "In 1991, Tim Berners-Lee released files describing his WorldWideWeb project."
+    },
+    {
+        "date": "July 27",
+        "event": "In 1993, Windows NT 3.1 was released by Microsoft for high-end workstations and servers."
+    },
+    {
+        "date": "July 28",
+        "event": "In 1955, IBM introduced the IBM 608 calculator, the first all-transistor calculator."
+    },
+    {
+        "date": "July 29",
+        "event": "In 2015, Microsoft launched Windows 10 as a free upgrade from Windows 7 and 8."
+    },
+    {
+        "date": "July 30",
+        "event": "In 1971, the first email program was developed by Ray Tomlinson."
+    },
+    {
+        "date": "July 31",
+        "event": "In 2006, the first version of Twitter was publicly released, revolutionizing real-time communication."
+    },
+    {
+        "date": "August 1",
+        "event": "In 1981, MTV launched with 'Video Killed the Radio Star,' marking a shift toward digital media consumption."
+    },
+    {
+        "date": "August 2",
+        "event": "In 1993, the Mac-based Newton MessagePad was released by Apple, one of the first PDAs."
+    },
+    {
+        "date": "August 3",
+        "event": "In 1977, Radio Shack announced the TRS-80, a low-cost personal computer for the home market."
+    },
+    {
+        "date": "August 4",
+        "event": "In 2004, Mozilla Firefox 0.9.3 was released, continuing to gain ground against Internet Explorer."
+    },
+    {
+        "date": "August 5",
+        "event": "In 2003, Myspace was officially launched, becoming one of the first popular social networking sites."
+    },
+    {
+        "date": "August 6",
+        "event": "In 1991, Tim Berners-Lee posted the first web page, launching the World Wide Web publicly."
+    },
+    {
+        "date": "August 7",
+        "event": "In 1981, IBM introduced its Personal Computer (IBM 5150), revolutionizing the computing industry."
+    },
+    {
+        "date": "August 8",
+        "event": "In 1995, Microsoft released Windows 95 to manufacturers ahead of its public debut later that month."
+    },
+    {
+        "date": "August 9",
+        "event": "In 1995, Netscape went public, triggering the dot-com boom and validating the web's economic potential."
+    },
+    {
+        "date": "August 10",
+        "event": "In 2000, the first USB flash drive was released in the United States by IBM."
+    },
+    {
+        "date": "August 11",
+        "event": "In 2003, the Blaster Worm began spreading through Windows systems, exploiting vulnerabilities in RPC."
+    },
+    {
+        "date": "August 12",
+        "event": "In 1981, IBM released the IBM PC, forever changing personal and business computing."
+    },
+    {
+        "date": "August 13",
+        "event": "In 2004, Google filed its IPO, raising over 1.6 billion dollars and setting its path to dominance."
+    },
+    {
+        "date": "August 14",
+        "event": "In 1998, the iMac G3 went on sale, showcasing Steve Jobs’s renewed vision for Apple."
+    },
+    {
+        "date": "August 15",
+        "event": "In 1998, the first public beta of the open-source Mozilla project was released."
+    },
+    {
+        "date": "August 16",
+        "event": "In 1993, Microsoft released MS-DOS 6.2 with added disk compression and backup tools."
+    },
+    {
+        "date": "August 17",
+        "event": "In 1991, Linus Torvalds announced he was working on a free operating system—Linux was born."
+    },
+    {
+        "date": "August 18",
+        "event": "In 1995, Microsoft announced Internet Explorer, entering the web browser market."
+    },
+    {
+        "date": "August 19",
+        "event": "In 1991, the Linux kernel version 0.01 was uploaded by Linus Torvalds to an FTP server."
+    },
+    {
+        "date": "August 20",
+        "event": "In 1982, the Commodore 64 went on sale, becoming one of the best-selling personal computers."
+    },
+    {
+        "date": "August 21",
+        "event": "In 1993, Intel introduced the Pentium processor to replace its aging 486 line."
+    },
+    {
+        "date": "August 22",
+        "event": "In 2007, Skype was purchased by eBay for $2.6 billion, aiming to boost its communications platform."
+    },
+    {
+        "date": "August 23",
+        "event": "In 2007, the Hashtag (#) was first proposed for use on Twitter by Chris Messina."
+    },
+    {
+        "date": "August 24",
+        "event": "In 1995, Microsoft officially released Windows 95 with major media fanfare."
+    },
+    {
+        "date": "August 25",
+        "event": "In 1991, Linus Torvalds posted about his new project—Linux—on the MINIX newsgroup."
+    },
+    {
+        "date": "August 26",
+        "event": "In 2002, the Mozilla Foundation released Phoenix 0.1, the browser that would become Firefox."
+    },
+    {
+        "date": "August 27",
+        "event": "In 2001, the Code Red II worm began circulating, exploiting the same flaw as Code Red."
+    },
+    {
+        "date": "August 28",
+        "event": "In 1990, Microsoft released Windows 3.0a with improved multimedia support."
+    },
+    {
+        "date": "August 29",
+        "event": "In 2003, Mydoom, one of the fastest spreading email worms, was first detected."
+    },
+    {
+        "date": "August 30",
+        "event": "In 1996, Windows NT 4.0 was released, combining the NT kernel with the Windows 95 interface."
+    },
+    {
+        "date": "August 31",
+        "event": "In 1994, Adobe released Acrobat Reader free of charge, helping make PDF an internet standard."
+    },
+    {
+        "date": "September 1",
+        "event": "In 2008, Google Chrome was announced, introducing a new approach to web browsing."
+    },
+    {
+        "date": "September 2",
+        "event": "In 1969, the first Interface Message Processor (IMP) was delivered to UCLA for the ARPANET."
+    },
+    {
+        "date": "September 3",
+        "event": "In 1995, eBay was founded by Pierre Omidyar as 'AuctionWeb'."
+    },
+    {
+        "date": "September 4",
+        "event": "In 1998, Google was founded by Larry Page and Sergey Brin."
+    },
+    {
+        "date": "September 5",
+        "event": "In 1983, IBM introduced the PC XT, its first computer with a hard drive."
+    },
+    {
+        "date": "September 6",
+        "event": "In 2006, Hewlett-Packard was implicated in a corporate spying scandal involving private investigators."
+    },
+    {
+        "date": "September 7",
+        "event": "In 2005, Apple introduced the iPod nano, replacing the iPod mini."
+    },
+    {
+        "date": "September 8",
+        "event": "In 1993, the term 'Eternal September' began as new users flooded Usenet via AOL."
+    },
+    {
+        "date": "September 9",
+        "event": "In 1947, the first documented computer bug—a moth—was removed from the Harvard Mark II."
+    },
+    {
+        "date": "September 10",
+        "event": "In 2002, Opera 7 beta was released, introducing the Presto layout engine."
+    },
+    {
+        "date": "September 11",
+        "event": "In 2001, major networks and data centers were disrupted following the terrorist attacks in the US."
+    },
+    {
+        "date": "September 12",
+        "event": "In 1958, Jack Kilby demonstrated the first working integrated circuit at Texas Instruments."
+    },
+    {
+        "date": "September 13",
+        "event": "In 1983, Lotus released Symphony, an integrated software suite for DOS."
+    },
+    {
+        "date": "September 14",
+        "event": "In 1994, the Netscape browser was renamed from 'Mosaic Netscape' due to trademark issues."
+    },
+    {
+        "date": "September 15",
+        "event": "In 1997, Google registered the google.com domain name."
+    },
+    {
+        "date": "September 16",
+        "event": "In 1992, IBM introduced ThinkPad laptops, launching a long-running line of business machines."
+    },
+    {
+        "date": "September 17",
+        "event": "In 1985, the C programming language was standardized by ANSI."
+    },
+    {
+        "date": "September 18",
+        "event": "In 1998, ICANN was formed to manage Internet naming and IP address allocation."
+    },
+    {
+        "date": "September 19",
+        "event": "In 1982, emoticons :-) and :-( were first proposed by Scott Fahlman on a Carnegie Mellon bulletin board."
+    },
+    {
+        "date": "September 20",
+        "event": "In 2001, Apple released Mac OS X 10.1 Puma, improving system performance and hardware support."
+    },
+    {
+        "date": "September 21",
+        "event": "In 1983, Borland released Turbo Pascal, a fast and affordable Pascal compiler for PCs."
+    },
+    {
+        "date": "September 22",
+        "event": "In 2003, the BitTorrent protocol was gaining traction for peer-to-peer file sharing."
+    },
+    {
+        "date": "September 23",
+        "event": "In 2002, Mozilla Phoenix 0.1 was released, the ancestor of Firefox."
+    },
+    {
+        "date": "September 24",
+        "event": "In 1997, Microsoft released Internet Explorer 4.0 as part of its desktop integration strategy."
+    },
+    {
+        "date": "September 25",
+        "event": "In 2001, Windows XP was released to manufacturing, combining consumer and business lines."
+    },
+    {
+        "date": "September 26",
+        "event": "In 1983, GNU Emacs was released by Richard Stallman, part of the free software movement."
+    },
+    {
+        "date": "September 27",
+        "event": "In 1998, Google celebrated its first birthday, retroactively declared their launch date."
+    },
+    {
+        "date": "September 28",
+        "event": "In 1987, HyperCard was released for the Macintosh, influencing the development of the web."
+    },
+    {
+        "date": "September 29",
+        "event": "In 1996, Palm Pilot surpassed 1 million units sold, becoming a dominant PDA."
+    },
+    {
+        "date": "September 30",
+        "event": "In 1997, AOL Instant Messenger (AIM) launched, shaping online chat for a generation."
+    },
+    {
+        "date": "October 1",
+        "event": "In 1971, the first email was sent by Ray Tomlinson using ARPANET."
+    },
+    {
+        "date": "October 2",
+        "event": "In 1955, ENIAC was officially decommissioned at the University of Pennsylvania."
+    },
+    {
+        "date": "October 3",
+        "event": "In 1995, eBay was officially launched by Pierre Omidyar."
+    },
+    {
+        "date": "October 4",
+        "event": "In 2011, Siri was introduced as part of the iPhone 4S, bringing voice assistants to mobile."
+    },
+    {
+        "date": "October 5",
+        "event": "In 2011, Steve Jobs, co-founder of Apple, passed away, leaving a profound legacy in computing."
+    },
+    {
+        "date": "October 6",
+        "event": "In 1997, AOL acquired CompuServe, consolidating early internet service providers."
+    },
+    {
+        "date": "October 7",
+        "event": "In 2002, Microsoft released Windows XP Media Center Edition, focused on home entertainment."
+    },
+    {
+        "date": "October 8",
+        "event": "In 1996, the Internet Archive was founded to preserve the history of the internet."
+    },
+    {
+        "date": "October 9",
+        "event": "In 2006, Google announced its acquisition of YouTube for $1.65 billion in stock."
+    },
+    {
+        "date": "October 10",
+        "event": "In 1980, the Ethernet standard was published by Xerox, DEC, and Intel."
+    },
+    {
+        "date": "October 11",
+        "event": "In 1977, VisiCalc was demonstrated for the first time, the first spreadsheet program for PCs."
+    },
+    {
+        "date": "October 12",
+        "event": "In 1999, Intel released the Pentium III processor, advancing multimedia performance."
+    },
+    {
+        "date": "October 13",
+        "event": "In 1983, Lotus was founded by Mitch Kapor, shortly before releasing Lotus 1-2-3."
+    },
+    {
+        "date": "October 14",
+        "event": "In 2003, Apple launched iTunes for Windows, expanding its music ecosystem beyond Mac users."
+    },
+    {
+        "date": "October 15",
+        "event": "In 1994, Netscape Navigator was released to beta testers."
+    },
+    {
+        "date": "October 16",
+        "event": "In 2000, Microsoft released Windows ME, the last OS based on MS-DOS."
+    },
+    {
+        "date": "October 17",
+        "event": "In 1989, the first commercial dial-up ISP in the US, The World, went online."
+    },
+    {
+        "date": "October 18",
+        "event": "In 2004, Ubuntu 4.10 'Warty Warthog' was released, focusing on ease of use and community."
+    },
+    {
+        "date": "October 19",
+        "event": "In 1985, Nintendo launched the Nintendo Entertainment System (NES) in North America."
+    },
+    {
+        "date": "October 20",
+        "event": "In 2003, Apple introduced the iTunes Music Store for Windows."
+    },
+    {
+        "date": "October 21",
+        "event": "In 2015, Back to the Future Day was celebrated with real-world tech reflections."
+    },
+    {
+        "date": "October 22",
+        "event": "In 2009, Microsoft released Windows 7 to replace the poorly received Windows Vista."
+    },
+    {
+        "date": "October 23",
+        "event": "In 2001, Apple introduced the iPod, revolutionizing digital music consumption."
+    },
+    {
+        "date": "October 24",
+        "event": "In 2003, the Concorde made its final flight—its control systems had relied on custom computing tech."
+    },
+    {
+        "date": "October 25",
+        "event": "In 2001, Microsoft released Windows XP, known for its stability and wide adoption."
+    },
+    {
+        "date": "October 26",
+        "event": "In 2012, Microsoft launched Windows 8, introducing a touchscreen-friendly interface."
+    },
+    {
+        "date": "October 27",
+        "event": "In 1998, Mozilla open-sourced its browser code, laying the groundwork for Firefox."
+    },
+    {
+        "date": "October 28",
+        "event": "In 1955, Bill Gates was born, later co-founding Microsoft and shaping the software industry."
+    },
+    {
+        "date": "October 29",
+        "event": "In 1969, the first message was sent over ARPANET between UCLA and Stanford."
+    },
+    {
+        "date": "October 30",
+        "event": "In 2000, the ILOVEYOU computer worm caused widespread disruption worldwide."
+    },
+    {
+        "date": "October 31",
+        "event": "In 2008, Satoshi Nakamoto published the Bitcoin white paper, launching decentralized digital currency."
+    },
+    {
+        "date": "November 1",
+        "event": "In 1983, Microsoft announced Windows, a graphical extension for MS-DOS."
+    },
+    {
+        "date": "November 2",
+        "event": "In 1988, the Morris Worm was released, the first major computer worm on the internet."
+    },
+    {
+        "date": "November 3",
+        "event": "In 1998, AOL bought Netscape for $4.2 billion."
+    },
+    {
+        "date": "November 4",
+        "event": "In 2010, Microsoft launched Kinect, a motion-sensing input device for Xbox 360."
+    },
+    {
+        "date": "November 5",
+        "event": "In 2007, Android 1.0 was officially released on the HTC Dream smartphone."
+    },
+    {
+        "date": "November 6",
+        "event": "In 2001, the original Xbox gaming console went gold for production."
+    },
+    {
+        "date": "November 7",
+        "event": "In 2000, the dot-com bubble showed signs of bursting with mass sell-offs in tech stocks."
+    },
+    {
+        "date": "November 8",
+        "event": "In 1977, the Tandy TRS-80 Model I computer began shipping to consumers."
+    },
+    {
+        "date": "November 9",
+        "event": "In 2004, Mozilla Firefox 1.0 was officially released."
+    },
+    {
+        "date": "November 10",
+        "event": "In 1983, Windows 1.0 was officially announced by Microsoft."
+    },
+    {
+        "date": "November 11",
+        "event": "In 2006, Sony launched the PlayStation 3 in Japan."
+    },
+    {
+        "date": "November 12",
+        "event": "In 1990, Tim Berners-Lee published the formal proposal for the World Wide Web."
+    },
+    {
+        "date": "November 13",
+        "event": "In 1980, Microsoft signed a deal to provide MS-DOS for the IBM PC."
+    },
+    {
+        "date": "November 14",
+        "event": "In 1995, the first version of the Java programming language was released publicly."
+    },
+    {
+        "date": "November 15",
+        "event": "In 2001, Microsoft released the original Xbox console in North America."
+    },
+    {
+        "date": "November 16",
+        "event": "In 1971, Intel introduced the first microprocessor, the 4004."
+    },
+    {
+        "date": "November 17",
+        "event": "In 2006, Sony released the PlayStation 3 in North America."
+    },
+    {
+        "date": "November 18",
+        "event": "In 1992, the first SMS was sent from a computer to a mobile phone in the UK."
+    },
+    {
+        "date": "November 19",
+        "event": "In 2006, Nintendo launched the Wii gaming console."
+    },
+    {
+        "date": "November 20",
+        "event": "In 1985, Windows 1.0 was released to the public."
+    },
+    {
+        "date": "November 21",
+        "event": "In 1980, Pac-Man was released in North America and became a cultural icon."
+    },
+    {
+        "date": "November 22",
+        "event": "In 1995, Microsoft released Internet Explorer 2.0 with support for JavaScript."
+    },
+    {
+        "date": "November 23",
+        "event": "In 1992, the first smartphone concept, IBM Simon, was demonstrated."
+    },
+    {
+        "date": "November 24",
+        "event": "In 1972, the first computerized bulletin board system (CBBS) was conceptualized."
+    },
+    {
+        "date": "November 25",
+        "event": "In 1986, Microsoft launched version 1.0 of its Excel spreadsheet for Windows."
+    },
+    {
+        "date": "November 26",
+        "event": "In 2003, the Mydoom virus began spreading, causing massive email outages."
+    },
+    {
+        "date": "November 27",
+        "event": "In 2002, the Xbox Live online gaming service launched."
+    },
+    {
+        "date": "November 28",
+        "event": "In 1972, Atari released Pong, one of the earliest arcade video games."
+    },
+    {
+        "date": "November 29",
+        "event": "In 1975, Bill Gates coined the term 'Micro-Soft' in a letter to Paul Allen."
+    },
+    {
+        "date": "November 30",
+        "event": "In 1983, Fred Cohen demonstrated the first self-replicating computer virus as part of his research."
+    },
+    {
+        "date": "December 1",
+        "event": "In 1975, the Altair 8800 appeared on the cover of Popular Electronics, inspiring the PC revolution."
+    },
+    {
+        "date": "December 2",
+        "event": "In 1942, the first digital computer, the Atanasoff–Berry Computer, was completed."
+    },
+    {
+        "date": "December 3",
+        "event": "In 1994, Sony released the PlayStation in Japan."
+    },
+    {
+        "date": "December 4",
+        "event": "In 2001, McAfee discovered the 'Goner' virus, one of the most destructive email worms of the time."
+    },
+    {
+        "date": "December 5",
+        "event": "In 1996, Palm released the PalmPilot Professional, a defining PDA of the era."
+    },
+    {
+        "date": "December 6",
+        "event": "In 1967, the prototype of Douglas Engelbart’s computer mouse was tested."
+    },
+    {
+        "date": "December 7",
+        "event": "In 1999, Napster reached 20 million users, triggering the rise of music piracy concerns."
+    },
+    {
+        "date": "December 8",
+        "event": "In 1980, John Lennon’s death led to a surge in CD development to preserve his music digitally."
+    },
+    {
+        "date": "December 9",
+        "event": "In 1968, Douglas Engelbart demonstrated the first mouse and GUI in the 'Mother of All Demos'."
+    },
+    {
+        "date": "December 10",
+        "event": "In 1815, Ada Lovelace was born. She later wrote the first algorithm intended for a machine."
+    },
+    {
+        "date": "December 11",
+        "event": "In 2008, Google released Android 1.0 source code to the public."
+    },
+    {
+        "date": "December 12",
+        "event": "In 1980, Microsoft moved to Bellevue, Washington, signaling its rapid growth."
+    },
+    {
+        "date": "December 13",
+        "event": "In 2000, Apple released Mac OS X Public Beta, ushering in the Aqua interface."
+    },
+    {
+        "date": "December 14",
+        "event": "In 1995, Netscape reached its peak stock price before the dot-com crash."
+    },
+    {
+        "date": "December 15",
+        "event": "In 2000, Wikipedia’s domain name was registered in preparation for its January 2001 launch."
+    },
+    {
+        "date": "December 16",
+        "event": "In 2003, the CAN-SPAM Act was signed into law, setting regulations for email marketing."
+    },
+    {
+        "date": "December 17",
+        "event": "In 2007, Google announced Android SDK 1.0 for developers."
+    },
+    {
+        "date": "December 18",
+        "event": "In 1998, the US Department of Justice investigated Microsoft for browser bundling practices."
+    },
+    {
+        "date": "December 19",
+        "event": "In 1983, Apple released Lisa OS, one of the first with a graphical user interface."
+    },
+    {
+        "date": "December 20",
+        "event": "In 1990, Tim Berners-Lee launched the first website on the World Wide Web."
+    },
+    {
+        "date": "December 21",
+        "event": "In 2012, Instagram surpassed 100 million users."
+    },
+    {
+        "date": "December 22",
+        "event": "In 2005, YouTube received a major investment from Sequoia Capital."
+    },
+    {
+        "date": "December 23",
+        "event": "In 2003, Windows XP SP2 beta was released, with major security upgrades."
+    },
+    {
+        "date": "December 24",
+        "event": "In 1997, HTML 4.0 was published as a W3C Recommendation."
+    },
+    {
+        "date": "December 25",
+        "event": "In 1990, the first successful test of the World Wide Web was completed by Berners-Lee."
+    },
+    {
+        "date": "December 26",
+        "event": "In 1991, Linus Torvalds released version 0.11 of the Linux kernel."
+    },
+    {
+        "date": "December 27",
+        "event": "In 2004, Wikipedia reached over 1 million edits."
+    },
+    {
+        "date": "December 28",
+        "event": "In 2000, Mac OS X Beta expired, making way for the full release in early 2001."
+    },
+    {
+        "date": "December 29",
+        "event": "In 1981, Microsoft was incorporated in Washington State."
+    },
+    {
+        "date": "December 30",
+        "event": "In 2006, Microsoft released Windows Vista to business customers."
+    },
+    {
+        "date": "December 31",
+        "event": "In 1999, Y2K preparedness reached its peak ahead of the new millennium."
+    }
+]

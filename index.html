@@ -12,7 +12,13 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body class="bg-gradient-to-br from-green-50 via-gray-50 to-gray-50 min-h-screen flex flex-col">
+<body class="bg-green-50 min-h-screen flex flex-col">
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" aria-label="Scroll to top" class="fixed bottom-6 right-6 z-50 bg-green-700 hover:bg-green-800 text-white rounded-full shadow-lg p-3 transition-opacity opacity-0 pointer-events-none" style="transition: opacity 0.3s;">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
     <header class="bg-yellow-50 border-b border-yellow-100 shadow">
         <div class="container mx-auto px-4 py-6 flex justify-between items-center">
             <div>
@@ -487,6 +493,27 @@
             }
         });
     });
+
+    // Scroll to Top Button logic
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    function checkScroll() {
+        // Get header height
+        const header = document.querySelector('header');
+        const headerBottom = header ? header.offsetHeight : 0;
+        if (window.scrollY > headerBottom + 10) {
+            scrollTopBtn.style.opacity = '1';
+            scrollTopBtn.style.pointerEvents = 'auto';
+        } else {
+            scrollTopBtn.style.opacity = '0';
+            scrollTopBtn.style.pointerEvents = 'none';
+        }
+    }
+    window.addEventListener('scroll', checkScroll);
+    scrollTopBtn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    // Initial check
+    checkScroll();
 
     // History fact for today
     async function showTodayHistoryFact() {

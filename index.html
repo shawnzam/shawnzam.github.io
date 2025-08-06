@@ -14,7 +14,9 @@
 
 <body class="bg-gradient-to-br from-green-100 via-gray-50 to-green-50 min-h-screen flex flex-col">
     <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn" aria-label="Scroll to top" class="fixed bottom-6 right-6 z-50 bg-green-700 hover:bg-green-800 text-white rounded-full shadow-lg p-3 transition-opacity opacity-0 pointer-events-none" style="transition: opacity 0.3s;">
+    <button id="scrollTopBtn" aria-label="Scroll to top"
+        class="fixed bottom-6 right-6 z-50 bg-green-700 hover:bg-green-800 text-white rounded-full shadow-lg p-3 transition-opacity opacity-0 pointer-events-none"
+        style="transition: opacity 0.3s;">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
         </svg>
@@ -28,22 +30,34 @@
                 <div id="time-rhyme" class="text-xs text-gray-500 mt-1"></div>
             </div>
             <nav>
-            <div x-data="{ open: false }" class="relative">
-                <button @click="open = !open" class="md:hidden p-2 rounded text-gray-700 focus:outline-none focus:ring">
-                    <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                    <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-                <nav :class="{'block': open, 'hidden': !open}" class="absolute md:static right-0 top-12 bg-white md:bg-transparent shadow md:shadow-none rounded md:rounded-none border md:border-none w-48 md:w-auto z-50 md:flex md:space-x-6 md:items-center hidden">
-                    <a href="#about-me" class="scroll-link block md:inline-block px-4 py-2 text-gray-700 font-medium hover:underline">About Me</a>
-                    <a href="#work-experience" class="scroll-link block md:inline-block px-4 py-2 text-gray-700 font-medium hover:underline">Work Experience</a>
-                    <a href="#education" class="scroll-link block md:inline-block px-4 py-2 text-gray-700 font-medium hover:underline">Education</a>
-                    <a href="#acknowledgments" class="scroll-link block md:inline-block px-4 py-2 text-gray-700 font-medium hover:underline">Acknowledgments</a>
-                </nav>
-            </div>
+                <div x-data="{ open: false }" class="relative">
+                    <button @click="open = !open"
+                        class="md:hidden p-2 rounded text-gray-700 focus:outline-none focus:ring">
+                        <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <nav :class="{'block': open, 'hidden': !open}"
+                        class="absolute md:static right-0 top-12 bg-white md:bg-transparent shadow md:shadow-none rounded md:rounded-none border md:border-none w-48 md:w-auto z-50 md:flex md:space-x-6 md:items-center hidden">
+                        <a href="#about-me"
+                            class="scroll-link block md:inline-block px-4 py-2 text-gray-700 font-medium hover:underline">About
+                            Me</a>
+                        <a href="#work-experience"
+                            class="scroll-link block md:inline-block px-4 py-2 text-gray-700 font-medium hover:underline">Work
+                            Experience</a>
+                        <a href="#education"
+                            class="scroll-link block md:inline-block px-4 py-2 text-gray-700 font-medium hover:underline">Education</a>
+                        <a href="#acknowledgments"
+                            class="scroll-link block md:inline-block px-4 py-2 text-gray-700 font-medium hover:underline">Acknowledgments</a>
+                    </nav>
+                </div>
             </nav>
         </div>
     </header>
@@ -68,8 +82,9 @@
                 <div class="bg-white p-6 rounded shadow border border-gray-200">
                     <p class="mb-2">I am the Director of Research Programming and Advanced Technologies at the Wharton
                         School of the University of Pennsylvania. I lead a team of developers who support faculty
-                        research by designing and delivering advanced software solutions rooted in machine learning,
-                        artificial intelligence, and data engineering. For more than a decade, I've worked at the
+                        research by designing and delivering advanced software solutions rooted in traditional software
+                        development, machine learning, artificial intelligence, and data engineering. 
+                        For more than a decade, I've worked at the
                         intersection of technology and academic research, helping bridge the gap between conceptual
                         inquiry and technical execution.</p>
                     <p class="mb-2">In recent years, my focus has shifted toward applied generative AI within higher

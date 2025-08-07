@@ -10,6 +10,45 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Alpine.js CDN -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        .nav-underline::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #15803d, #22c55e);
+            border-radius: 2px;
+            transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+            margin: 0 auto;
+        }
+        .nav-underline:hover::after, .nav-underline:focus::after {
+            width: 80%;
+        }
+        
+        /* Hamburger menu morph animation - 2 line version */
+        .hamburger {
+            width: 32px;
+            height: 32px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .hamburger-bar {
+            fill: currentColor;
+            transition: transform 0.9s cubic-bezier(0.4,0,0.2,1);
+        }
+        .hamburger-bar.top {
+            transform-origin: 16px 12.5px;
+        }
+        .hamburger-bar.bottom {
+            transform-origin: 16px 19.5px;
+        }
+        .hamburger-open .hamburger-bar.top {
+            transform: rotate(45deg) translateY(3.5px);
+        }
+        .hamburger-open .hamburger-bar.bottom {
+            transform: rotate(-45deg) translateY(-3.5px);
+        }
+    </style>
 </head>
 
 <body class="bg-gradient-to-br from-green-100 via-gray-50 to-green-50 min-h-screen flex flex-col">
@@ -32,32 +71,29 @@
             <nav>
                 <div x-data="{ open: false }" class="relative">
                     <button @click="open = !open"
-                        class="md:hidden p-2 rounded text-gray-700 focus:outline-none focus:ring">
-                        <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
+                        :class="{'hamburger-open': open}"
+                        class="md:hidden flex items-center justify-center w-12 h-12 rounded-full text-gray-700 focus:outline-none focus:ring bg-white shadow transition-all duration-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28">
+                            <rect class="hamburger-bar top" x="6" y="11" width="20" height="3" rx="1.5" />
+                            <rect class="hamburger-bar bottom" x="6" y="18" width="20" height="3" rx="1.5" />
                         </svg>
                     </button>
                     <nav :class="{'block': open, 'hidden': !open}"
                         class="absolute md:static right-0 top-12 bg-white md:bg-transparent shadow md:shadow-none rounded md:rounded-none border md:border-none w-48 md:w-auto z-50 md:flex md:space-x-6 md:items-center hidden">
                         <a href="#about-me"
-                            class="scroll-link block md:inline-block px-4 py-2 text-gray-700 font-medium hover:underline">About
-                            Me</a>
+                            class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">About Me</a>
+                        <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
                         <a href="#work-experience"
-                            class="scroll-link block md:inline-block px-4 py-2 text-gray-700 font-medium hover:underline">Work
-                            Experience</a>
+                            class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Work Experience</a>
+                        <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
                         <a href="#education"
-                            class="scroll-link block md:inline-block px-4 py-2 text-gray-700 font-medium hover:underline">Education</a>
+                            class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Education</a>
+                        <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
                         <a href="#technologies"
-                            class="scroll-link block md:inline-block px-4 py-2 text-gray-700 font-medium hover:underline">Technologies</a>
+                            class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Technologies</a>
+                        <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
                         <a href="#acknowledgments"
-                            class="scroll-link block md:inline-block px-4 py-2 text-gray-700 font-medium hover:underline">Acknowledgments</a>
+                            class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Acknowledgments</a>
                     </nav>
                 </div>
             </nav>

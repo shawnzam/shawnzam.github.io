@@ -10,6 +10,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Alpine.js CDN -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Markdown parser for blog posts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         .nav-underline::after {
             content: '';
@@ -55,6 +57,45 @@
         .hamburger-open .hamburger-bar.bottom {
             transform: rotate(-45deg) translateY(-3.5px);
         }
+
+        .blog-content h1,
+        .blog-content h2,
+        .blog-content h3 {
+            color: #1f2937;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-content h1 {
+            font-size: 1.85rem;
+            margin-top: 0;
+        }
+
+        .blog-content h2 {
+            font-size: 1.35rem;
+        }
+
+        .blog-content h3 {
+            font-size: 1.15rem;
+        }
+
+        .blog-content p {
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content em {
+            color: #4b5563;
+        }
+
+        .blog-content hr {
+            border: 0;
+            border-top: 1px solid #d1d5db;
+            margin: 1.5rem 0;
+        }
     </style>
 </head>
 
@@ -99,6 +140,9 @@
                         <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
                         <a href="#technologies"
                             class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Technologies</a>
+                        <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
+                        <a href="#blog"
+                            class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Blog</a>
                         <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
                         <a href="#acknowledgments"
                             class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Acknowledgments</a>
@@ -317,6 +361,21 @@
                             <span class="font-semibold text-gray-800">Neo4j</span>
                         </div>
                     </div>
+                </div>
+            </section>
+            <!-- Blog Section -->
+            <section id="blog" class="mt-12 text-left scroll-mt-24">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Blog <span aria-label="writing" title="Blog">📝</span>
+                </h3>
+                <div class="bg-white p-6 rounded shadow border border-gray-200">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-5">
+                        <span class="text-sm font-semibold tracking-wide text-gray-500 uppercase">Latest Post</span>
+                        <a href="disgraphia.md" target="_blank" rel="noopener"
+                            class="text-sm text-blue-700 hover:underline">Open disgraphia.md</a>
+                    </div>
+                    <article id="blog-post-disgraphia" class="blog-content">
+                        <p class="text-gray-500">Loading post...</p>
+                    </article>
                 </div>
             </section>
             <!-- Acknowledgments Section -->
@@ -667,6 +726,27 @@
         }
     }
     showTodayHistoryFact();
+
+    // Blog post markdown loader
+    async function loadBlogPost(postPath, targetId) {
+        const target = document.getElementById(targetId);
+        if (!target) return;
+
+        try {
+            const response = await fetch(postPath);
+            if (!response.ok) throw new Error(`Unable to fetch ${postPath}`);
+
+            const markdown = await response.text();
+            if (window.marked && typeof window.marked.parse === 'function') {
+                target.innerHTML = window.marked.parse(markdown);
+            } else {
+                target.textContent = markdown;
+            }
+        } catch (e) {
+            target.innerHTML = '<p class="text-red-700">Unable to load blog post right now.</p>';
+        }
+    }
+    loadBlogPost('disgraphia.md', 'blog-post-disgraphia');
 
     // Set footer year
     document.getElementById('footer-year').textContent = new Date().getFullYear();

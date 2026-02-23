@@ -65,6 +65,10 @@
 
     <main class="flex-1 container mx-auto px-4 py-12">
         <article class="max-w-3xl mx-auto bg-white p-6 sm:p-8 rounded shadow border border-gray-200">
+            <img src="../when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for.png"
+                alt="Title image for When the Words Won't Come"
+                class="w-full h-64 sm:h-80 object-cover rounded-lg border border-gray-200 mb-6" />
+            <p class="text-sm text-gray-500 mb-5">Published: <span id="post-published-date">Loading...</span></p>
             <div id="post-content" class="post-content">
                 <p class="text-gray-500">Loading post...</p>
             </div>
@@ -78,6 +82,46 @@
     </footer>
 
     <script>
+        function parseFrontMatter(markdown) {
+            const match = markdown.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/);
+            if (!match) {
+                return { metadata: {}, content: markdown };
+            }
+
+            const metadata = {};
+            match[1].split('\n').forEach(line => {
+                const separator = line.indexOf(':');
+                if (separator === -1) return;
+                const key = line.slice(0, separator).trim();
+                const value = line.slice(separator + 1).trim().replace(/^['"]|['"]$/g, '');
+                if (key) metadata[key] = value;
+            });
+
+            return {
+                metadata,
+                content: markdown.slice(match[0].length)
+            };
+        }
+
+        function formatPublishedDate(value) {
+            if (!value) return 'Date not set';
+
+            const parts = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+            if (!parts) return value;
+
+            const parsedDate = new Date(
+                Number(parts[1]),
+                Number(parts[2]) - 1,
+                Number(parts[3])
+            );
+
+            return new Intl.DateTimeFormat('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            }).format(parsedDate);
+        }
+
         async function loadPost() {
             const target = document.getElementById('post-content');
             if (!target) return;
@@ -87,12 +131,27 @@
                 if (!response.ok) throw new Error('Unable to fetch post markdown');
 
                 const markdown = await response.text();
+                const parsed = parseFrontMatter(markdown);
+                const publishedDate = document.getElementById('post-published-date');
+
+                if (publishedDate) {
+                    publishedDate.textContent = formatPublishedDate(parsed.metadata.published);
+                }
+
+                if (parsed.metadata.title) {
+                    document.title = parsed.metadata.title;
+                }
+
                 if (window.marked && typeof window.marked.parse === 'function') {
-                    target.innerHTML = window.marked.parse(markdown);
+                    target.innerHTML = window.marked.parse(parsed.content);
                 } else {
-                    target.textContent = markdown;
+                    target.textContent = parsed.content;
                 }
             } catch (e) {
+                const publishedDate = document.getElementById('post-published-date');
+                if (publishedDate) {
+                    publishedDate.textContent = 'Unavailable';
+                }
                 target.innerHTML = '<p class="text-red-700">Unable to load blog post right now.</p>';
             }
         }

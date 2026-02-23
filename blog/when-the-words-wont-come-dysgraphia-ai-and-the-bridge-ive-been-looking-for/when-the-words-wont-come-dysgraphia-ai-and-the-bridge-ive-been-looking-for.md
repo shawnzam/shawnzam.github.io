@@ -1,3 +1,9 @@
+---
+title: "When the Words Won't Come: Dysgraphia, AI, and the Bridge I've Been Looking For"
+published: 2026-02-23
+type: essay
+---
+
 # When the Words Won't Come: Dysgraphia, AI, and the Bridge I've Been Looking For
 
 *A personal essay*

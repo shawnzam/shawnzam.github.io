@@ -24,11 +24,20 @@
             <h2 class="text-2xl font-bold text-gray-800 mb-6">Posts</h2>
 
             <article class="bg-white p-6 rounded shadow border border-gray-200">
+                <a href="./when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for/" class="block mb-4">
+                    <img src="./when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for.png"
+                        alt="Title image for When the Words Won't Come"
+                        class="w-full h-56 sm:h-64 object-cover rounded-lg border border-gray-200" loading="lazy" />
+                </a>
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
                     <h3 class="text-xl font-semibold text-gray-900">When the Words Won't Come: Dysgraphia, AI, and the
                         Bridge I've Been Looking For</h3>
                     <span class="text-xs font-semibold tracking-wide text-gray-500 uppercase">Essay</span>
                 </div>
+                <p class="text-sm text-gray-500 mb-3">Published:
+                    <span class="post-published-date"
+                        data-md="./when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for/when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for.md">Loading...</span>
+                </p>
                 <p class="text-gray-700 mb-4">
                     A personal reflection on dysgraphia, parenting, and how modern AI tools can reduce the friction
                     between ideas and written expression.
@@ -46,6 +55,61 @@
     </footer>
 
     <script>
+        function parseFrontMatter(markdown) {
+            const match = markdown.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/);
+            if (!match) return {};
+
+            const metadata = {};
+            match[1].split('\n').forEach(line => {
+                const separator = line.indexOf(':');
+                if (separator === -1) return;
+                const key = line.slice(0, separator).trim();
+                const value = line.slice(separator + 1).trim().replace(/^['"]|['"]$/g, '');
+                if (key) metadata[key] = value;
+            });
+
+            return metadata;
+        }
+
+        function formatPublishedDate(value) {
+            if (!value) return 'Date not set';
+
+            const parts = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+            if (!parts) return value;
+
+            const parsedDate = new Date(
+                Number(parts[1]),
+                Number(parts[2]) - 1,
+                Number(parts[3])
+            );
+
+            return new Intl.DateTimeFormat('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            }).format(parsedDate);
+        }
+
+        async function hydratePublishedDates() {
+            const dateNodes = document.querySelectorAll('.post-published-date[data-md]');
+
+            await Promise.all(Array.from(dateNodes).map(async node => {
+                const postPath = node.getAttribute('data-md');
+                if (!postPath) return;
+
+                try {
+                    const response = await fetch(postPath);
+                    if (!response.ok) throw new Error('Unable to fetch post markdown');
+                    const markdown = await response.text();
+                    const metadata = parseFrontMatter(markdown);
+                    node.textContent = formatPublishedDate(metadata.published);
+                } catch (e) {
+                    node.textContent = 'Unavailable';
+                }
+            }));
+        }
+
+        hydratePublishedDates();
         document.getElementById('footer-year').textContent = new Date().getFullYear();
     </script>
 </body>

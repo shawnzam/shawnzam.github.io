@@ -83,7 +83,7 @@
             if (!target) return;
 
             try {
-                const response = await fetch('./disgraphia.md');
+                const response = await fetch('./when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for.md');
                 if (!response.ok) throw new Error('Unable to fetch post markdown');
 
                 const markdown = await response.text();

@@ -66,7 +66,7 @@ None of this is about intelligence. The higher order thinking, the ideas, the an
 
 For decades, the primary accommodations for dysgraphia centered on reducing the transcription burden through low tech and mid tech tools. Extended time. Typed assignments instead of handwritten. Scribes. Speech to text dictation software.
 
-The evidence for some of these is real. A controlled UK study of children with significant communication and writing needs found that training them to use speech to text software for structured writing tasks over several weeks produced measurable improvements in both the quantity and quality of their writing, and perhaps more importantly, statistically significant gains in self esteem. Students reported feeling more independent than when relying on a human scribe. That's not nothing. Independence matters, especially for a child who has spent years watching peers write easily while they struggle.
+The evidence for some of these is real. A controlled UK study of children with significant communication and writing needs found that training them to use speech to text software for structured writing tasks over several weeks produced measurable improvements in both the quantity and quality of their writing, and perhaps more importantly, statistically significant gains in self esteem. Students reported feeling more independent than when relying on a human scribe (Kambouri, Simon, & Brooks, 2023). That's not nothing. Independence matters, especially for a child who has spent years watching peers write easily while they struggle.
 
 Word prediction software, tools that suggest the next word as you type, has also been studied, with some evidence suggesting improvements in words produced and spelling accuracy. But researchers have been honest that the evidence base here is limited and aging. Most studies predating modern AI were conducted with tools that now look primitive compared to what's in our pockets.
 
@@ -88,7 +88,7 @@ For the first time in my professional life, my output started to feel like it ac
 
 That's not a productivity improvement. That's a different experience of being able to communicate.
 
-A 2025 survey study of students with disabilities in higher education found that many are already using generative AI tools to overcome barriers in academic writing. The same study found real concerns: AI inaccuracies, academic integrity ambiguity, and cost barriers that risk creating a new kind of digital divide where the tool that helps most is locked behind a subscription. These are legitimate issues. But the underlying finding, that neurodivergent people are reaching for these tools because they work, because they reduce friction that has always cost them more than it cost everyone else, rings completely true to my experience.
+A 2025 survey study of students with disabilities in higher education found that many are already using generative AI tools to overcome barriers in academic writing. The same study found real concerns: AI inaccuracies, academic integrity ambiguity, and cost barriers that risk creating a new kind of digital divide where the tool that helps most is locked behind a subscription (Zhao, Cox, & Chen, 2025). These are legitimate issues. But the underlying finding, that neurodivergent people are reaching for these tools because they work, because they reduce friction that has always cost them more than it cost everyone else, rings completely true to my experience.
 
 ---
 
@@ -107,3 +107,10 @@ What I want for him is what I want for anyone whose brain works in a way that th
 I want the tools to get out of the way between his brain and the world.
 
 I spent most of my career finding workarounds. He shouldn't have to.
+
+---
+
+## References
+
+- Kambouri, M., Simon, H., & Brooks, G. (2023). Using speech to text technology to empower young writers with special educational needs. *Research in Developmental Disabilities, 135*, 104466. https://doi.org/10.1016/j.ridd.2023.104466
+- Zhao, X., Cox, A., & Chen, X. (2025). The use of generative AI by students with disabilities in higher education. *The Internet and Higher Education, 66*, 101014. https://doi.org/10.1016/j.iheduc.2025.101014

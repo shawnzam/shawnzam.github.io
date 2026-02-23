@@ -68,7 +68,9 @@
             <img src="../when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for.png"
                 alt="Title image for When the Words Won't Come"
                 class="w-full h-64 sm:h-80 object-cover rounded-lg border border-gray-200 mb-6" />
-            <p class="text-sm text-gray-500 mb-5">Published: <span id="post-published-date">Loading...</span></p>
+            <p class="text-sm text-gray-500 mb-5">Published:
+                <span id="post-published-date" data-published-fallback="2026-02-23">Loading...</span>
+            </p>
             <div id="post-content" class="post-content">
                 <p class="text-gray-500">Loading post...</p>
             </div>
@@ -83,23 +85,36 @@
 
     <script>
         function parseFrontMatter(markdown) {
-            const match = markdown.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/);
-            if (!match) {
-                return { metadata: {}, content: markdown };
+            const normalized = markdown.replace(/^\uFEFF/, '');
+            const lines = normalized.split(/\r?\n/);
+            if (!lines.length || lines[0].trim() !== '---') {
+                return { metadata: {}, content: normalized };
             }
 
             const metadata = {};
-            match[1].split('\n').forEach(line => {
-                const separator = line.indexOf(':');
-                if (separator === -1) return;
-                const key = line.slice(0, separator).trim();
-                const value = line.slice(separator + 1).trim().replace(/^['"]|['"]$/g, '');
+            let endIndex = -1;
+
+            for (let i = 1; i < lines.length; i += 1) {
+                const line = lines[i];
+                if (line.trim() === '---') {
+                    endIndex = i;
+                    break;
+                }
+
+                const match = line.match(/^([^:]+):\s*(.*)$/);
+                if (!match) continue;
+                const key = match[1].trim();
+                const value = match[2].trim().replace(/^['"]|['"]$/g, '');
                 if (key) metadata[key] = value;
-            });
+            }
+
+            if (endIndex === -1) {
+                return { metadata: {}, content: normalized };
+            }
 
             return {
                 metadata,
-                content: markdown.slice(match[0].length)
+                content: lines.slice(endIndex + 1).join('\n')
             };
         }
 
@@ -133,9 +148,10 @@
                 const markdown = await response.text();
                 const parsed = parseFrontMatter(markdown);
                 const publishedDate = document.getElementById('post-published-date');
+                const fallbackPublished = publishedDate ? publishedDate.getAttribute('data-published-fallback') : '';
 
                 if (publishedDate) {
-                    publishedDate.textContent = formatPublishedDate(parsed.metadata.published);
+                    publishedDate.textContent = formatPublishedDate(parsed.metadata.published || fallbackPublished);
                 }
 
                 if (parsed.metadata.title) {
@@ -150,7 +166,8 @@
             } catch (e) {
                 const publishedDate = document.getElementById('post-published-date');
                 if (publishedDate) {
-                    publishedDate.textContent = 'Unavailable';
+                    const fallbackPublished = publishedDate.getAttribute('data-published-fallback');
+                    publishedDate.textContent = formatPublishedDate(fallbackPublished) || 'Unavailable';
                 }
                 target.innerHTML = '<p class="text-red-700">Unable to load blog post right now.</p>';
             }

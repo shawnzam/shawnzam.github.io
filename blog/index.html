@@ -5,8 +5,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shawn Zamechek | Blog</title>
-    <link rel="alternate" type="application/rss+xml" title="Shawn Zamechek Blog RSS"
-        href="https://shawnzam.github.io/blog/rss.xml" />
+    <meta name="description" content="Writing on AI, research, and learning." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://shawnzam.github.io/blog/" />
+    <link rel="alternate" type="application/rss+xml" title="Shawn Zamechek Blog RSS" href="https://shawnzam.github.io/blog/rss.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Shawn Zamechek | Blog" />
+    <meta property="og:description" content="Writing on AI, research, and learning." />
+    <meta property="og:url" content="https://shawnzam.github.io/blog/" />
+    <meta property="og:image" content="https://shawnzam.github.io/blog/when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shawn Zamechek | Blog" />
+    <meta name="twitter:description" content="Writing on AI, research, and learning." />
+    <meta name="twitter:image" content="https://shawnzam.github.io/blog/when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for.png" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Shawn Zamechek Blog",
+  "url": "https://shawnzam.github.io/blog/",
+  "description": "Writing on AI, research, and learning.",
+  "publisher": {
+    "@type": "Person",
+    "name": "Shawn Zamechek"
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "When the Words Won't Come: Dysgraphia, AI, and the Bridge I've Been Looking For",
+      "datePublished": "2026-02-23",
+      "url": "https://shawnzam.github.io/blog/when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for/",
+      "author": {
+        "@type": "Person",
+        "name": "Shawn Zamechek"
+      }
+    }
+  ]
+}
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -30,104 +66,25 @@
 
             <article class="bg-white p-6 rounded shadow border border-gray-200">
                 <a href="./when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for/" class="block mb-4">
-                    <img src="./when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for.png"
-                        alt="Title image for When the Words Won't Come"
+                    <img src="./when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for.png" alt="Title image for When the Words Won&#39;t Come: Dysgraphia, AI, and the Bridge I&#39;ve Been Looking For"
                         class="w-full h-56 sm:h-64 object-cover rounded-lg border border-gray-200" loading="lazy" />
                 </a>
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
-                    <h3 class="text-xl font-semibold text-gray-900">When the Words Won't Come: Dysgraphia, AI, and the
-                        Bridge I've Been Looking For</h3>
+                    <h3 class="text-xl font-semibold text-gray-900">When the Words Won&#39;t Come: Dysgraphia, AI, and the Bridge I&#39;ve Been Looking For</h3>
                     <span class="text-xs font-semibold tracking-wide text-gray-500 uppercase">Essay</span>
                 </div>
-                <p class="text-sm text-gray-500 mb-3">Published:
-                    <span class="post-published-date"
-                        data-md="./when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for/when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for.md"
-                        data-published-fallback="2026-02-23">Loading...</span>
-                </p>
-                <p class="text-gray-700 mb-4">
-                    A personal reflection on dysgraphia, parenting, and how modern AI tools can reduce the friction
-                    between ideas and written expression.
-                </p>
-                <a href="./when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for/"
-                    class="text-blue-700 hover:underline font-semibold">Read post</a>
+                <p class="text-sm text-gray-500 mb-3">Published: February 23, 2026</p>
+                <p class="text-gray-700 mb-4">There is a particular kind of frustration that parents do not talk about enough. In our house it has not been quiet. It has been loud. It has been arguments that stretch for hours at the...</p>
+                <a href="./when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for/" class="text-blue-700 hover:underline font-semibold">Read post</a>
             </article>
         </div>
     </main>
 
     <footer class="bg-white border-t py-4 mt-auto">
         <div class="container mx-auto px-4 text-center text-gray-500">
-            &copy; <span id="footer-year"></span> Shawn Zamechek.
+            &copy; 2026 Shawn Zamechek.
         </div>
     </footer>
-
-    <script>
-        function parseFrontMatter(markdown) {
-            const normalized = markdown.replace(/^\uFEFF/, '');
-            const lines = normalized.split(/\r?\n/);
-            if (!lines.length || lines[0].trim() !== '---') return {};
-
-            const metadata = {};
-            let endIndex = -1;
-
-            for (let i = 1; i < lines.length; i += 1) {
-                const line = lines[i];
-                if (line.trim() === '---') {
-                    endIndex = i;
-                    break;
-                }
-
-                const match = line.match(/^([^:]+):\s*(.*)$/);
-                if (!match) continue;
-                const key = match[1].trim();
-                const value = match[2].trim().replace(/^['"]|['"]$/g, '');
-                if (key) metadata[key] = value;
-            }
-
-            return endIndex === -1 ? {} : metadata;
-        }
-
-        function formatPublishedDate(value) {
-            if (!value) return 'Date not set';
-
-            const parts = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
-            if (!parts) return value;
-
-            const parsedDate = new Date(
-                Number(parts[1]),
-                Number(parts[2]) - 1,
-                Number(parts[3])
-            );
-
-            return new Intl.DateTimeFormat('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            }).format(parsedDate);
-        }
-
-        async function hydratePublishedDates() {
-            const dateNodes = document.querySelectorAll('.post-published-date[data-md]');
-
-            await Promise.all(Array.from(dateNodes).map(async node => {
-                const postPath = node.getAttribute('data-md');
-                if (!postPath) return;
-                const fallbackPublished = node.getAttribute('data-published-fallback');
-
-                try {
-                    const response = await fetch(postPath);
-                    if (!response.ok) throw new Error('Unable to fetch post markdown');
-                    const markdown = await response.text();
-                    const metadata = parseFrontMatter(markdown);
-                    node.textContent = formatPublishedDate(metadata.published || fallbackPublished);
-                } catch (e) {
-                    node.textContent = formatPublishedDate(fallbackPublished) || 'Unavailable';
-                }
-            }));
-        }
-
-        hydratePublishedDates();
-        document.getElementById('footer-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 
 </html>

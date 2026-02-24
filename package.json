@@ -2,6 +2,11 @@
   "name": "shawnzam.github.io",
   "private": true,
   "scripts": {
-    "build:blog": "node scripts/build-blog.mjs"
+    "build": "npm run build:blog && npm run build:css",
+    "build:blog": "node scripts/build-blog.mjs",
+    "build:css": "tailwindcss -c tailwind.config.cjs -i ./assets/styles.input.css -o ./assets/styles.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
   }
 }

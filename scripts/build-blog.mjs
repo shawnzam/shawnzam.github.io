@@ -324,7 +324,7 @@ ${imageHtml}                <div class="flex flex-col sm:flex-row sm:items-cente
     <script type="application/ld+json">
 ${JSON.stringify(blogLd, null, 2)}
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 
 <body class="bg-gradient-to-br from-green-100 via-gray-50 to-green-50 min-h-screen flex flex-col">
@@ -412,7 +412,7 @@ function renderPostPage(post) {
     <script type="application/ld+json">
 ${JSON.stringify(postLd, null, 2)}
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../assets/styles.css" />
     <style>
         .post-content h1,
         .post-content h2,

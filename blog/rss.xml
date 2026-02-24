@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shawn Zamechek Blog</title>
+    <link>https://shawnzam.github.io/blog/</link>
+    <description>Writing on AI, research, and learning.</description>
+    <language>en-us</language>
+    <atom:link href="https://shawnzam.github.io/blog/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Feb 2026 00:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>When the Words Won't Come: Dysgraphia, AI, and the Bridge I've Been Looking For</title>
+      <link>https://shawnzam.github.io/blog/when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for/</link>
+      <guid isPermaLink="true">https://shawnzam.github.io/blog/when-the-words-wont-come-dysgraphia-ai-and-the-bridge-ive-been-looking-for/</guid>
+      <pubDate>Mon, 23 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[A personal reflection on dysgraphia, parenting, and how modern AI tools can reduce the friction between ideas and written expression.]]></description>
+      <category>essay</category>
+    </item>
+  </channel>
+</rss>

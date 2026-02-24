@@ -325,10 +325,30 @@ ${imageHtml}                <div class="flex flex-col sm:flex-row sm:items-cente
 ${JSON.stringify(blogLd, null, 2)}
     </script>
     <link rel="stylesheet" href="../assets/styles.css" />
+    <style>
+        .site-header {
+            position: relative;
+            background: rgba(254, 252, 232, 0.94);
+            box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04), 0 8px 20px -20px rgba(15, 23, 42, 0.55);
+        }
+
+        .site-header::after {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            right: 1rem;
+            bottom: 0;
+            height: 1px;
+            background: linear-gradient(90deg,
+                    rgba(148, 163, 184, 0),
+                    rgba(148, 163, 184, 0.55),
+                    rgba(148, 163, 184, 0));
+        }
+    </style>
 </head>
 
 <body class="bg-gradient-to-br from-green-100 via-gray-50 to-green-50 min-h-screen flex flex-col">
-    <header class="bg-yellow-50 border-b border-yellow-100 shadow">
+    <header class="site-header">
         <div class="container mx-auto px-4 py-6 flex justify-between items-center">
             <div>
                 <h1 class="text-3xl font-extrabold text-gray-800">Blog</h1>
@@ -414,6 +434,25 @@ ${JSON.stringify(postLd, null, 2)}
     </script>
     <link rel="stylesheet" href="../../assets/styles.css" />
     <style>
+        .site-header {
+            position: relative;
+            background: rgba(254, 252, 232, 0.94);
+            box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04), 0 8px 20px -20px rgba(15, 23, 42, 0.55);
+        }
+
+        .site-header::after {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            right: 1rem;
+            bottom: 0;
+            height: 1px;
+            background: linear-gradient(90deg,
+                    rgba(148, 163, 184, 0),
+                    rgba(148, 163, 184, 0.55),
+                    rgba(148, 163, 184, 0));
+        }
+
         .post-content h1,
         .post-content h2,
         .post-content h3 {
@@ -457,7 +496,7 @@ ${JSON.stringify(postLd, null, 2)}
 </head>
 
 <body class="bg-gradient-to-br from-green-100 via-gray-50 to-green-50 min-h-screen flex flex-col">
-    <header class="bg-yellow-50 border-b border-yellow-100 shadow">
+    <header class="site-header">
         <div class="container mx-auto px-4 py-6 flex justify-between items-center">
             <div>
                 <h1 class="text-2xl font-extrabold text-gray-800">Blog Post</h1>

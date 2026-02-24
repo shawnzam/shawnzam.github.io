@@ -245,7 +245,7 @@ function loadPosts() {
       relativeUrl: `/blog/${slug}/`,
       absoluteUrl: `${SITE_URL}/blog/${slug}/`,
       image,
-      imageAbsoluteUrl: image ? `${SITE_URL}/blog/${image}` : `${SITE_URL}/me.JPG`,
+      imageAbsoluteUrl: image ? `${SITE_URL}/blog/${image}` : `${SITE_URL}/me.jpg`,
     });
   }
 
@@ -254,7 +254,7 @@ function loadPosts() {
 
 function renderBlogIndex(posts) {
   const currentYear = new Date().getFullYear();
-  const socialImage = posts[0]?.imageAbsoluteUrl || `${SITE_URL}/me.JPG`;
+  const socialImage = posts[0]?.imageAbsoluteUrl || `${SITE_URL}/me.jpg`;
   const blogLd = {
     "@context": "https://schema.org",
     "@type": "Blog",

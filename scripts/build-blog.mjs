@@ -306,6 +306,7 @@ ${imageHtml}                <div class="flex flex-col sm:flex-row sm:items-cente
 
 <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0;url=${SITE_URL}/blog/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shawn Zamechek | Blog</title>
     <meta name="description" content="${escapeHtml(BLOG_DESCRIPTION)}" />
@@ -453,6 +454,7 @@ function renderPostPage(post) {
 
 <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0;url=${post.absoluteUrl}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${escapeHtml(pageTitle)}</title>
     <meta name="description" content="${escapeHtml(pageDescription)}" />

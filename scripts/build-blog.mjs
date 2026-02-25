@@ -306,7 +306,7 @@ ${imageHtml}                <div class="flex flex-col sm:flex-row sm:items-cente
 
 <head>
     <meta charset="UTF-8" />
-    <script>if(location.hostname!=='zamechek.com')location.replace('https://zamechek.com'+location.pathname+location.search);</script>
+    <script>if(!['zamechek.com','localhost','127.0.0.1'].includes(location.hostname))location.replace('https://zamechek.com'+location.pathname+location.search);</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shawn Zamechek | Blog</title>
     <meta name="description" content="${escapeHtml(BLOG_DESCRIPTION)}" />
@@ -334,6 +334,9 @@ ${imageHtml}                <div class="flex flex-col sm:flex-row sm:items-cente
     <script type="application/ld+json">
 ${JSON.stringify(blogLd, null, 2)}
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/styles.css" />
     <style>
         .site-header {
@@ -454,7 +457,7 @@ function renderPostPage(post) {
 
 <head>
     <meta charset="UTF-8" />
-    <script>if(location.hostname!=='zamechek.com')location.replace('https://zamechek.com'+location.pathname+location.search);</script>
+    <script>if(!['zamechek.com','localhost','127.0.0.1'].includes(location.hostname))location.replace('https://zamechek.com'+location.pathname+location.search);</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${escapeHtml(pageTitle)}</title>
     <meta name="description" content="${escapeHtml(pageDescription)}" />
@@ -482,6 +485,9 @@ function renderPostPage(post) {
     <script type="application/ld+json">
 ${JSON.stringify(postLd, null, 2)}
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../../assets/styles.css" />
     <style>
         .site-header {

@@ -30,8 +30,15 @@
 
 ## CSS / Design
 - Tailwind CSS v3 utility-first
-- Custom input in `assets/styles.input.css`
+- Custom input in `assets/styles.input.css` (contains only @tailwind directives — no custom classes there)
 - Compiled/minified output to `assets/styles.css`
+- All per-page custom CSS lives in inline `<style>` blocks inside each HTML file (not in styles.input.css)
+- Color palette: green-based background gradient (from-green-100 via-gray-50 to-green-50), white cards, gray-800/900 text, blue-700 links, green-700 accents
+- Header: warm cream background (rgba(254,252,232,0.94)) with subtle gradient bottom border
+- No web font loaded — falls back to system fonts (Tailwind default sans-serif stack)
+- Technology section: rainbow pill-badges (each a different pastel color — green, yellow, blue, indigo, purple, pink, orange, red, sky, amber, lime, fuchsia, gray, cyan, emerald)
+- Blog post content styled via `.post-content` scoped CSS (no Tailwind prose plugin in use)
+- Nav: animated underline via `.nav-underline::after` pseudo-element with green gradient
 
 ## Deployment Context
 - Site is 100% static — no backend, no server-side rendering

@@ -3,6 +3,5 @@ scripts/
 package.json
 package-lock.json
 tailwind.config.cjs
-history.json
 .gitignore
 .assetsignore

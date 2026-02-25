@@ -21,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      deployments: write
 
     steps:
       - name: Checkout repository
@@ -53,3 +54,12 @@ jobs:
           git add blog/index.html blog/rss.xml sitemap.xml blog/*/index.html assets/styles.css
           git commit -m "chore: rebuild blog artifacts [skip ci]"
           git push
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 37fb40649f6dbbb1625fc0b876103f6f
+          projectName: shawnzam-github-io
+          directory: .
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

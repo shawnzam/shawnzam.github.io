@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const SITE_URL = "https://shawnzam.github.io";
+const SITE_URL = "https://zamechek.com";
 const BLOG_DIR = path.join(process.cwd(), "blog");
 const BLOG_DESCRIPTION = "Writing on AI, research, and learning.";
 const AUTHOR_NAME = "Shawn Zamechek";

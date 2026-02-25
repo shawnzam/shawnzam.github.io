@@ -56,10 +56,8 @@ jobs:
           git push
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 37fb40649f6dbbb1625fc0b876103f6f
-          projectName: shawnzam-github-io
-          directory: .
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          command: pages deploy . --project-name=shawnzam-github-io --branch=master

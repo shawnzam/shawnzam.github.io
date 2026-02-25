@@ -393,7 +393,7 @@ ${postCards}
 
     <footer class="bg-white border-t py-4 mt-auto">
         <div class="container mx-auto px-4 text-center text-gray-500">
-            &copy; ${currentYear} ${AUTHOR_NAME}.
+            &copy; ${currentYear} <a href="mailto:${AUTHOR_EMAIL}" class="hover:underline">${AUTHOR_NAME}</a>.
         </div>
     </footer>
     <script>
@@ -585,7 +585,7 @@ ${post.html}
 
     <footer class="bg-white border-t py-4 mt-auto">
         <div class="container mx-auto px-4 text-center text-gray-500">
-            &copy; ${currentYear} ${AUTHOR_NAME}.
+            &copy; ${currentYear} <a href="mailto:${AUTHOR_EMAIL}" class="hover:underline">${AUTHOR_NAME}</a>.
         </div>
     </footer>
     <script>

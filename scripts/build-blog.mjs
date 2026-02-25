@@ -321,6 +321,15 @@ ${imageHtml}                <div class="flex flex-col sm:flex-row sm:items-cente
     <meta name="twitter:title" content="Shawn Zamechek | Blog" />
     <meta name="twitter:description" content="${escapeHtml(BLOG_DESCRIPTION)}" />
     <meta name="twitter:image" content="${socialImage}" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K2VQENWRZJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-K2VQENWRZJ');
+    </script>
     <script type="application/ld+json">
 ${JSON.stringify(blogLd, null, 2)}
     </script>
@@ -459,6 +468,15 @@ function renderPostPage(post) {
     <meta name="twitter:title" content="${escapeHtml(pageTitle)}" />
     <meta name="twitter:description" content="${escapeHtml(pageDescription)}" />
     <meta name="twitter:image" content="${post.imageAbsoluteUrl}" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K2VQENWRZJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-K2VQENWRZJ');
+    </script>
     <script type="application/ld+json">
 ${JSON.stringify(postLd, null, 2)}
     </script>

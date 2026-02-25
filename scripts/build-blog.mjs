@@ -5,6 +5,7 @@ const SITE_URL = "https://zamechek.com";
 const BLOG_DIR = path.join(process.cwd(), "blog");
 const BLOG_DESCRIPTION = "Writing on AI, research, and learning.";
 const AUTHOR_NAME = "Shawn Zamechek";
+const AUTHOR_EMAIL = "shawn@zamechek.com";
 
 function readText(filePath) {
   return fs.readFileSync(filePath, "utf8");

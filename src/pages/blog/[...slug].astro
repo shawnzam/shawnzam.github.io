@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const slug = post.slug;
+const canonical = `https://zamechek.com/blog/${slug}/`;
+const ogImage = `https://zamechek.com/blog/${slug}.png`;
+
+const ldJson = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.data.title,
+  "datePublished": post.data.published.toISOString().split('T')[0],
+  "url": canonical,
+  "image": ogImage,
+  "author": {
+    "@type": "Person",
+    "name": "Shawn Zamechek"
+  }
+};
+---
+
+<BlogPostLayout
+  title={post.data.title}
+  description={post.data.description ?? post.data.title}
+  canonical={canonical}
+  ogImage={ogImage}
+  publishedDate={post.data.published}
+  type={post.data.type}
+  ldJson={ldJson}
+>
+  <Content />
+</BlogPostLayout>

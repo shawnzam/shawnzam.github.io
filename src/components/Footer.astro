@@ -1,0 +1,13 @@
+---
+---
+
+<footer class="bg-white border-t py-4 mt-auto">
+  <div class="container mx-auto px-4 text-center text-gray-500">
+    &copy; <span id="footer-year"></span> <a href="mailto:shawn@zamechek.com" class="hover:underline">Shawn Zamechek</a>.
+  </div>
+</footer>
+
+<script>
+  const el = document.getElementById('footer-year');
+  if (el) el.textContent = String(new Date().getFullYear());
+</script>

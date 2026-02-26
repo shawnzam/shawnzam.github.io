@@ -20,3 +20,7 @@ pnpm-debug.log*
 .idea/
 *.swp
 *.swo
+
+# Astro build output
+dist/
+.astro/

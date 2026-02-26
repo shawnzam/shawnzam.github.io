@@ -1,12 +1,18 @@
 {
   "name": "shawnzam.github.io",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "npm run build:blog && npm run build:css",
-    "build:blog": "node scripts/build-blog.mjs",
-    "build:css": "tailwindcss -c tailwind.config.cjs -i ./assets/styles.input.css -o ./assets/styles.css --minify"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
   },
-  "devDependencies": {
+  "dependencies": {
+    "@astrojs/rss": "^4.0.7",
+    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.16.0",
     "tailwindcss": "^3.4.17"
   }
 }

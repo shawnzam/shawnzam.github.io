@@ -1,0 +1,146 @@
+---
+interface Props {
+  activePage?: string;
+}
+const { activePage } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+    <div>
+      <h1 class="text-3xl font-extrabold text-gray-800">Shawn Zamechek</h1>
+      <a href="mailto:shawn@zamechek.com" class="block text-sm text-blue-700 hover:underline mt-1">shawn@zamechek.com</a>
+      <div id="time-rhyme" class="text-xs text-gray-500 mt-1"></div>
+    </div>
+    <nav>
+      <div class="relative">
+        <button
+          id="mobile-menu-toggle"
+          aria-label="Toggle navigation menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          class="md:hidden flex items-center justify-center w-12 h-12 rounded-full text-gray-700 focus:outline-none focus:ring bg-white shadow transition-all duration-900"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28">
+            <rect class="hamburger-bar top" x="6" y="11" width="20" height="3" rx="1.5" />
+            <rect class="hamburger-bar bottom" x="6" y="18" width="20" height="3" rx="1.5" />
+          </svg>
+        </button>
+        <nav
+          id="mobile-menu"
+          class="absolute md:static right-0 top-12 bg-white md:bg-transparent shadow md:shadow-none rounded md:rounded-none border md:border-none w-48 md:w-auto z-50 md:flex md:space-x-6 md:items-center hidden"
+        >
+          <a href="/#about-me" class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">About Me</a>
+          <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
+          <a href="/#work-experience" class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Work Experience</a>
+          <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
+          <a href="/#education" class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Education</a>
+          <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
+          <a href="/#technologies" class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Technologies</a>
+          <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
+          <a href="/blog/" class="block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Blog</a>
+          <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
+          <a href="/#acknowledgments" class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Acknowledgments</a>
+        </nav>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: relative;
+    background: rgba(254, 252, 232, 0.94);
+    box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04), 0 8px 20px -20px rgba(15, 23, 42, 0.55);
+  }
+
+  .site-header::after {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+        rgba(148, 163, 184, 0),
+        rgba(148, 163, 184, 0.55),
+        rgba(148, 163, 184, 0));
+  }
+
+  .nav-underline::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #15803d, #22c55e);
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0 auto;
+  }
+
+  .nav-underline:hover::after,
+  .nav-underline:focus::after {
+    width: 80%;
+  }
+
+  /* Hamburger menu morph animation - 2 line version */
+  .hamburger-bar {
+    fill: currentColor;
+    transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hamburger-bar.top {
+    transform-origin: 16px 12.5px;
+  }
+
+  .hamburger-bar.bottom {
+    transform-origin: 16px 19.5px;
+  }
+
+  :global(.hamburger-open) .hamburger-bar.top {
+    transform: rotate(45deg) translateY(3.5px);
+  }
+
+  :global(.hamburger-open) .hamburger-bar.bottom {
+    transform: rotate(-45deg) translateY(-3.5px);
+  }
+</style>
+
+<script>
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  function closeMobileMenu() {
+    if (!mobileMenu || !mobileMenuToggle) return;
+    mobileMenu.classList.add('hidden');
+    mobileMenuToggle.classList.remove('hamburger-open');
+    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  if (mobileMenuToggle && mobileMenu) {
+    mobileMenuToggle.addEventListener('click', function () {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileMenuToggle.classList.toggle('hamburger-open', isHidden);
+      mobileMenuToggle.setAttribute('aria-expanded', String(isHidden));
+    });
+  }
+
+  // Smooth scroll for nav links (only on home page)
+  document.querySelectorAll('.scroll-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = (this as HTMLAnchorElement).getAttribute('href');
+      if (href && href.includes('#') && window.location.pathname === '/') {
+        const hash = href.split('#')[1];
+        const target = document.querySelector('#' + hash);
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({ top: (target as HTMLElement).offsetTop - 40, behavior: 'smooth' });
+        }
+      }
+      if (window.innerWidth < 768) {
+        closeMobileMenu();
+      }
+    });
+  });
+</script>

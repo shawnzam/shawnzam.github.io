@@ -4,10 +4,6 @@ published: 2026-02-23
 type: essay
 ---
 
-# When the Words Won't Come: Dysgraphia, AI, and the Bridge I've Been Looking For
-
----
-
 There is a particular kind of frustration that parents do not talk about enough. In our house it has not been quiet. It has been loud. It has been arguments that stretch for hours at the kitchen table. It has been raised voices over handwriting that drifts across the page, over a poster that should have been planned in pencil before the permanent marker came out, over a worksheet that could have been neater if he would just slow down.
 
 I have asked him to erase and try again. I have pushed him to outline before writing. I have insisted that he think it through first. I have watched small mistakes turn into tears, then anger, then shame. And beneath all of it there has been the same stubborn belief on my part that if he would just try harder, be more careful, be more organized, this would not be so hard.

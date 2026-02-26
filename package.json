@@ -4,9 +4,12 @@
   "scripts": {
     "build": "npm run build:blog && npm run build:css",
     "build:blog": "node scripts/build-blog.mjs",
-    "build:css": "tailwindcss -c tailwind.config.cjs -i ./assets/styles.input.css -o ./assets/styles.css --minify"
+    "build:css": "tailwindcss -c tailwind.config.cjs -i ./assets/styles.input.css -o ./assets/styles.css --minify",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "wrangler": "^4.68.1"
   }
 }

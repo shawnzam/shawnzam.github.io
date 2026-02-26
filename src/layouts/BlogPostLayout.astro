@@ -35,18 +35,20 @@ const formattedDate = publishedDate
           class="w-full h-64 sm:h-80 object-cover rounded-lg border border-gray-200 mb-8"
         />
       )}
-      <header class="mb-8">
-        <div class="flex items-center gap-3 mb-3">
-          {type && <span class="text-xs font-semibold tracking-wide text-gray-500 uppercase">{type}</span>}
+      <div class="bg-white p-6 sm:p-10 rounded shadow border border-gray-200">
+        <header class="mb-8">
+          <div class="flex items-center gap-3 mb-3">
+            {type && <span class="text-xs font-semibold tracking-wide text-gray-500 uppercase">{type}</span>}
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">{title}</h1>
+          {formattedDate && <p class="text-sm text-gray-500">Published: {formattedDate}</p>}
+        </header>
+        <div class="post-content prose prose-gray max-w-none">
+          <slot />
         </div>
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">{title}</h1>
-        {formattedDate && <p class="text-sm text-gray-500">Published: {formattedDate}</p>}
-      </header>
-      <div class="post-content prose prose-gray max-w-none">
-        <slot />
-      </div>
-      <div class="mt-12 pt-6 border-t border-gray-200">
-        <a href="/blog/" class="text-blue-700 hover:underline font-semibold">&larr; Back to Blog</a>
+        <div class="mt-12 pt-6 border-t border-gray-200">
+          <a href="/blog/" class="text-blue-700 hover:underline font-semibold">&larr; Back to Blog</a>
+        </div>
       </div>
     </article>
   </main>

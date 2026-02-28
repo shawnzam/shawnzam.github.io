@@ -24,3 +24,7 @@ pnpm-debug.log*
 # Astro build output
 dist/
 .astro/
+
+# Local agent metadata
+.cloude/
+.claude/

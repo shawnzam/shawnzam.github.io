@@ -39,7 +39,7 @@ written                                            730 games
 
 ## What This Actually Tells Us About Agentic Coding in Early 2026
 
-The 700-line Python script (pulling NBA box scores via `nba_api`, feeding them to an LLM, and generating a full analytics report) is unremarkable code. What *is* remarkable is that I wrote basically none of it. Seven prompts. Most of them under 20 words. One of them was literally just *"and are we not using uv?"* and the agent restructured the entire project toolchain. That's the real story here.
+The 700-line Python script (pulling NBA box scores via `nba_api`, feeding them to an LLM, and generating a full analytics report) is unremarkable code. What *is* remarkable is that I wrote basically none of it. Seven prompts. Most of them under 20 words. One of them was literally just *"and are we not using uv?"* and the agent restructured the entire project toolchain. All of this was done using Claude Code running Claude Sonnet 4.6 (not an endorsement — just what I had open). That's the real story here.
 
 We're at a point where the bottleneck isn't coding anymore. It's knowing what to ask, catching when something's off (the broken run command in prompt 6), and having enough technical intuition to steer. The 64.7% accuracy is fine, but the actual win was validating an idea end-to-end faster than most meetings get to an agenda.
 

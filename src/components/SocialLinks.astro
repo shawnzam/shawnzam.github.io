@@ -1,0 +1,39 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+
+const socialLinks = [
+  {
+    href: 'https://www.linkedin.com/in/zamechek/',
+    label: 'LinkedIn',
+    ariaLabel: 'Shawn Zamechek on LinkedIn',
+    hoverClass: 'hover:text-sky-700',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5A2.49 2.49 0 1 1 0 3.5a2.49 2.49 0 0 1 4.98 0ZM.5 8.5h4.9V24H.5V8.5Zm7.98 0h4.7v2.12h.07c.66-1.18 2.26-2.42 4.66-2.42 4.98 0 5.9 3.28 5.9 7.55V24h-4.9v-7.3c0-1.74-.03-3.98-2.42-3.98-2.42 0-2.8 1.9-2.8 3.86V24h-4.9V8.5Z"/></svg>`,
+  },
+  {
+    href: 'https://shawnzamechek.substack.com/',
+    label: 'Substack',
+    ariaLabel: 'Shawn Zamechek on Substack',
+    hoverClass: 'hover:text-orange-700',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true" fill="none"><path d="M4 4.5h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 8h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M5.5 11.5h13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M6 14.5h12v5H6z" fill="currentColor"/></svg>`,
+  },
+];
+---
+
+<div class={`flex flex-wrap items-center gap-x-3 gap-y-1 ${className}`}>
+  {socialLinks.map((link) => (
+    <a
+      href={link.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={link.ariaLabel}
+      class={`inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 transition-colors ${link.hoverClass}`}
+    >
+      <span set:html={link.icon} />
+      <span>{link.label}</span>
+    </a>
+  ))}
+</div>

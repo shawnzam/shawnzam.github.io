@@ -1,9 +1,10 @@
 ---
 interface Props {
   className?: string;
+  showLabels?: boolean;
 }
 
-const { className = '' } = Astro.props;
+const { className = '', showLabels = true } = Astro.props;
 
 const socialLinks = [
   {
@@ -33,7 +34,7 @@ const socialLinks = [
       class={`inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 transition-colors ${link.hoverClass}`}
     >
       <span set:html={link.icon} />
-      <span>{link.label}</span>
+      {showLabels && <span>{link.label}</span>}
     </a>
   ))}
 </div>

@@ -13,7 +13,7 @@ const { activePage } = Astro.props;
       <h1 class="text-3xl font-extrabold text-gray-800">Shawn Zamechek</h1>
       <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
         <a href="mailto:shawn@zamechek.com" class="text-sm text-blue-700 hover:underline">shawn@zamechek.com</a>
-        <SocialLinks />
+        <SocialLinks showLabels={false} className="gap-x-2" />
       </div>
       <div id="time-rhyme" class="text-xs text-gray-500 mt-1"></div>
     </div>

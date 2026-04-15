@@ -20,3 +20,7 @@ Here is a live one I generated in a single prompt — *"keynot, but if the audie
 ></iframe>
 
 The new default should be: reach for Claude and HTML first, reach for PowerPoint only when someone on the other end genuinely needs to edit a `.pptx`. Pitches, internal readouts, lunch-and-learns, conference talks, client one-pagers — all of that ships faster and looks sharper as a browser deck. Install the skill via `/plugin marketplace add shawnzam/keynot` and then `/plugin install keynot@keynot-marketplace`, or grab the `SKILL.md` directly from the [repo](https://github.com/shawnzam/keynot). The next time someone says "can you throw together some slides," throw together some HTML instead.
+
+---
+
+*Thanks to [Brandon Lafving](https://www.linkedin.com/in/brandon-lafving) for putting the "just have Claude build the deck in HTML" idea in front of me in the first place.*

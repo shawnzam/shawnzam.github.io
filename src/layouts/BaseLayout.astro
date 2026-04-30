@@ -56,5 +56,118 @@ const {
 </head>
 <body class="bg-gradient-to-br from-green-100 via-gray-50 to-green-50 min-h-screen flex flex-col">
   <slot />
+  <script>
+    // Cursor-warped baseline + reflow-as-animation on headings + emphasized labels
+    (function warpAll() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const selector = 'h1, h2, h3, h4, h5, h6, .font-semibold.text-lg, .font-semibold.text-md';
+      const elements = Array.from(document.querySelectorAll<HTMLElement>(selector));
+      type Target = { el: HTMLElement; glyphs: HTMLSpanElement[] };
+      const targets: Target[] = [];
+      for (const el of elements) {
+        const glyphs: HTMLSpanElement[] = [];
+        const newChildren: Node[] = [];
+        for (const node of Array.from(el.childNodes)) {
+          if (node.nodeType === Node.TEXT_NODE) {
+            const parts = (node.textContent || '').split(/(\s+)/);
+            for (const part of parts) {
+              if (!part) continue;
+              if (/^\s+$/.test(part)) { newChildren.push(document.createTextNode(part)); continue; }
+              const wrap = document.createElement('span');
+              wrap.style.display = 'inline-block';
+              wrap.style.whiteSpace = 'nowrap';
+              for (const ch of part) {
+                const s = document.createElement('span');
+                s.textContent = ch;
+                s.style.display = 'inline-block';
+                s.style.willChange = 'transform';
+                wrap.appendChild(s);
+                glyphs.push(s);
+              }
+              newChildren.push(wrap);
+            }
+          } else {
+            newChildren.push(node);
+          }
+        }
+        el.replaceChildren(...newChildren);
+        targets.push({ el, glyphs });
+      }
+      const sigma = 90, maxAmp = 2.6, yRange = 160, gain = 0.065;
+      const flipDuration = 500;
+      const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
+      let cx = -9999, cy = -9999;
+      window.addEventListener('mousemove', (e) => { cx = e.clientX; cy = e.clientY; });
+      type Center = { x: number; y: number };
+      type Flip = { startX: number; startY: number; t0: number };
+      const centerMap = new WeakMap<Target, Center[]>();
+      const flipMap = new WeakMap<Target, Flip[]>();
+      const computeWarp = (c: Center) => {
+        const dy = cy - c.y;
+        const yFalloff = Math.max(0, 1 - Math.abs(dy) / yRange);
+        if (yFalloff <= 0) return 0;
+        const dx = cx - c.x;
+        const xFalloff = Math.exp(-(dx * dx) / (2 * sigma * sigma));
+        return Math.sign(dy) * Math.min(Math.abs(dy) * gain, maxAmp) * xFalloff * yFalloff;
+      };
+      const computeFlip = (f: Flip, now: number) => {
+        const progress = Math.min(1, Math.max(0, (now - f.t0) / flipDuration));
+        const k = 1 - easeOut(progress);
+        return { x: f.startX * k, y: f.startY * k };
+      };
+      const applyTransforms = () => {
+        const now = performance.now();
+        for (const t of targets) {
+          const centers = centerMap.get(t)!;
+          const flips = flipMap.get(t)!;
+          for (let i = 0; i < t.glyphs.length; i++) {
+            const fp = computeFlip(flips[i], now);
+            const wy = computeWarp(centers[i]);
+            t.glyphs[i].style.transform = `translate(${fp.x.toFixed(2)}px, ${(fp.y + wy).toFixed(2)}px)`;
+          }
+        }
+      };
+      const measureLayout = (animate: boolean) => {
+        const now = performance.now();
+        if (animate) {
+          for (const t of targets) for (const g of t.glyphs) g.style.transform = '';
+        }
+        for (const t of targets) {
+          const newCenters: Center[] = t.glyphs.map(g => {
+            const r = g.getBoundingClientRect();
+            return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+          });
+          const oldCenters = centerMap.get(t);
+          const oldFlips = flipMap.get(t);
+          if (animate && oldCenters && oldFlips && oldCenters.length === newCenters.length) {
+            const newFlips: Flip[] = t.glyphs.map((_, i) => {
+              const cur = computeFlip(oldFlips[i], now);
+              const oldWarp = computeWarp(oldCenters[i]);
+              const newWarp = computeWarp(newCenters[i]);
+              return {
+                startX: oldCenters[i].x + cur.x - newCenters[i].x,
+                startY: oldCenters[i].y + cur.y + oldWarp - newCenters[i].y - newWarp,
+                t0: now,
+              };
+            });
+            flipMap.set(t, newFlips);
+          } else {
+            flipMap.set(t, t.glyphs.map(() => ({ startX: 0, startY: 0, t0: -1e9 })));
+          }
+          centerMap.set(t, newCenters);
+        }
+        if (animate) applyTransforms();
+      };
+      measureLayout(false);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => measureLayout(true));
+      let resizeRAF = 0;
+      window.addEventListener('resize', () => {
+        if (resizeRAF) return;
+        resizeRAF = requestAnimationFrame(() => { resizeRAF = 0; measureLayout(true); });
+      });
+      function tick() { applyTransforms(); requestAnimationFrame(tick); }
+      requestAnimationFrame(tick);
+    })();
+  </script>
 </body>
 </html>

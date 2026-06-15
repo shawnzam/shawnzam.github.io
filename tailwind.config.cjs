@@ -5,8 +5,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        serif: ['Source Serif 4', ...defaultTheme.fontFamily.serif],
+        sans: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
+        mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
+        serif: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
       },
     },
   },

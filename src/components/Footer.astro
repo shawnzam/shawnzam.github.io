@@ -2,10 +2,11 @@
 import SocialLinks from './SocialLinks.astro';
 ---
 
-<footer class="bg-white border-t py-4 mt-auto">
-  <div class="container mx-auto px-4 text-center text-gray-500">
+<footer class="border-t border-[var(--line)] py-5 mt-16" style="background: var(--surface);">
+  <div class="container mx-auto px-4 text-[var(--muted)]">
     <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm">
-      <span>&copy; <span id="footer-year"></span> <a href="mailto:shawn@zamechek.com" class="hover:underline">Shawn Zamechek</a>.</span>
+      <span class="prompt"><b>EOF</b> · &copy; <span id="footer-year"></span> <a href="mailto:shawn@zamechek.com">Shawn Zamechek</a></span>
+      <span class="text-[var(--faint)]">·</span>
       <SocialLinks />
     </div>
   </div>

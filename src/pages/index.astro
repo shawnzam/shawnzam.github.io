@@ -32,199 +32,198 @@ const accountableAiCertificateUrl = 'https://api.accredible.com/v1/frontend/cred
   <main class="flex-1 container mx-auto px-4 py-12">
     <div class="max-w-2xl mx-auto text-center">
       <img src="/me.jpg" alt="Photo of Shawn Zamechek"
-        class="w-32 h-32 object-cover rounded-full shadow mx-auto mb-6 border border-gray-300" />
-      <h2 id="hero-title" class="text-4xl font-extrabold text-gray-900 mb-4">AI Strategy, Innovation &amp; Emerging Technology</h2>
-      <p class="text-lg text-gray-700 mb-8">Driving responsible AI adoption and technology innovation at one of the world's leading business schools, from governance and experimentation to faculty partnership and university-wide strategy.</p>
+        class="w-28 h-28 object-cover mx-auto mb-6 border border-[var(--line-strong)]" />
+      <div class="prompt text-xs mb-3">$ cat ./intro.txt</div>
+      <h2 id="hero-title" class="text-3xl sm:text-4xl font-extrabold text-[var(--ink)] mb-4">AI Strategy, Innovation &amp; Emerging Technology</h2>
+      <p class="text-base sm:text-lg text-[var(--muted)] mb-10 leading-relaxed">Driving responsible AI adoption and technology innovation at one of the world's leading business schools, from governance and experimentation to faculty partnership and university-wide strategy.</p>
 
-      <div class="mb-8">
-        <h3 class="text-lg font-semibold text-gray-800 mb-2">
-          Today in Computing History <span id="history-date" class="font-normal text-gray-500"></span>
-          <span aria-label="calendar" title="Calendar">📅</span>
-        </h3>
-        <div id="history-fact" class="mx-auto bg-gray-100 border border-gray-300 rounded p-3 text-sm text-gray-700 max-w-md"></div>
+      <div class="panel panel--striped text-left mb-4">
+        <span class="panel__stripe"></span>
+        <div class="prompt text-xs mb-2">$ history --today <span id="history-date" class="text-[var(--faint)]"></span></div>
+        <div id="history-fact" class="text-sm text-[var(--ink)]"></div>
       </div>
 
       <!-- About Me -->
-      <section id="about-me" class="mt-12 text-left scroll-mt-24">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">About Me <span aria-label="person" title="About Me">🧑‍💻</span></h3>
-        <div class="bg-white p-6 rounded shadow border border-gray-200">
-          <p class="mb-2">I'm the Senior IT Director, Innovation &amp; AI at the Wharton School, University of Pennsylvania, where I lead Wharton Computing's approach to AI and emerging technologies in support of School priorities. My work centers on responsible AI adoption, governance, and structured experimentation that turns pilots into scalable institutional capabilities.</p>
-          <p class="mb-2">I partner with faculty, staff, and students to ensure technology efforts are aligned and sustainable, and I represent Wharton Computing in University-wide and industry initiatives. I completed Wharton's Strategies for Accountable AI program in 2024, which deepened my focus on ethical, human-centered AI deployment.</p>
-          <p class="mb-2">Outside of work, I enjoy cooking, playing basketball, and spending time with my kids. I also serve as VP on the board of the <a href="https://www.glifecenter.org/" target="_blank" rel="noopener" class="text-blue-700 hover:underline">Germantown Life Enrichment Center</a> in Philadelphia.</p>
+      <section id="about-me" class="mt-16 text-left scroll-mt-24">
+        <div class="sec"><h3 class="sec__label">about_me</h3><hr class="sec__rule" /></div>
+        <div class="panel">
+          <p class="mb-3 leading-relaxed text-[var(--ink)]">I'm the Senior IT Director, Innovation &amp; AI at the Wharton School, University of Pennsylvania, where I lead Wharton Computing's approach to AI and emerging technologies in support of School priorities. My work centers on responsible AI adoption, governance, and structured experimentation that turns pilots into scalable institutional capabilities.</p>
+          <p class="mb-3 leading-relaxed text-[var(--ink)]">I partner with faculty, staff, and students to ensure technology efforts are aligned and sustainable, and I represent Wharton Computing in University-wide and industry initiatives. I completed Wharton's Strategies for Accountable AI program in 2024, which deepened my focus on ethical, human-centered AI deployment.</p>
+          <p class="leading-relaxed text-[var(--ink)]">Outside of work, I enjoy cooking, playing basketball, and spending time with my kids. I also serve as VP on the board of the <a href="https://www.glifecenter.org/" target="_blank" rel="noopener">Germantown Life Enrichment Center</a> in Philadelphia.</p>
         </div>
       </section>
 
       <!-- Work Experience -->
-      <section id="work-experience" class="mt-12 text-left scroll-mt-24">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Work Experience <span aria-label="briefcase" title="Work Experience">💼</span></h3>
-        <div class="space-y-6">
-          <div class="bg-white p-6 rounded shadow border border-green-100">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-              <span class="font-semibold text-md text-gray-800 md:inline-block">Senior IT Director, Innovation &amp; AI</span>
-              <span class="text-gray-500 text-sm md:ml-4 md:inline-block">Mar 2026 – Present</span>
+      <section id="work-experience" class="mt-16 text-left scroll-mt-24">
+        <div class="sec"><h3 class="sec__label">work_experience</h3><hr class="sec__rule" /></div>
+        <div class="space-y-5">
+          <div class="panel">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2 gap-1">
+              <span class="font-bold text-[var(--ink)]">Senior IT Director, Innovation &amp; AI</span>
+              <span class="text-[var(--faint)] text-sm md:ml-4">Mar 2026 – Present</span>
             </div>
-            <div class="text-sm text-gray-600">Lead Wharton Computing's approach to AI and emerging technologies in support of School priorities. Establish AI governance and responsible-use guardrails for ethical, scalable adoption. Design and manage structured experimentation: pilots that test, validate, and scale new technologies. Partner across faculty, staff, and students to ensure efforts are aligned and sustainable. Represent Wharton Computing in University-wide initiatives and industry partnerships.</div>
+            <div class="text-sm text-[var(--muted)] leading-relaxed">Lead Wharton Computing's approach to AI and emerging technologies in support of School priorities. Establish AI governance and responsible-use guardrails for ethical, scalable adoption. Design and manage structured experimentation: pilots that test, validate, and scale new technologies. Partner across faculty, staff, and students to ensure efforts are aligned and sustainable. Represent Wharton Computing in University-wide initiatives and industry partnerships.</div>
           </div>
-          <div class="bg-white p-6 rounded shadow border border-blue-100">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-              <span class="font-semibold text-md text-gray-800 md:inline-block">Director for Research Programming &amp; Advanced Technologies</span>
-              <span class="text-gray-500 text-sm md:ml-4 md:inline-block">Mar 2025 – Mar 2026</span>
+          <div class="panel">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2 gap-1">
+              <span class="font-bold text-[var(--ink)]">Director for Research Programming &amp; Advanced Technologies</span>
+              <span class="text-[var(--faint)] text-sm md:ml-4">Mar 2025 – Mar 2026</span>
             </div>
-            <div class="text-sm text-gray-600">Provided strategic leadership and support for advanced initiatives, especially in generative AI. Offered consulting services across the organization and school, driving innovation and technical excellence in research programming and advanced technologies.</div>
+            <div class="text-sm text-[var(--muted)] leading-relaxed">Provided strategic leadership and support for advanced initiatives, especially in generative AI. Offered consulting services across the organization and school, driving innovation and technical excellence in research programming and advanced technologies.</div>
           </div>
-          <div class="bg-white p-6 rounded shadow border border-yellow-100">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-              <span class="font-semibold text-lg text-gray-800">IT Director of Research Programming</span>
-              <span class="text-gray-500 md:ml-4">Aug 2021 – Mar 2025</span>
+          <div class="panel">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2 gap-1">
+              <span class="font-bold text-[var(--ink)]">IT Director of Research Programming</span>
+              <span class="text-[var(--faint)] text-sm md:ml-4">Aug 2021 – Mar 2025</span>
             </div>
-            <div class="text-sm text-gray-600">Led and mentored a team of research developers and data engineers, delivered innovative solutions for Wharton faculty. Served as technical manager for AI and LLM projects, including the CARGO lecture recall application and LLM-powered research tools. Consulted for large-scale studies and research initiatives.</div>
+            <div class="text-sm text-[var(--muted)] leading-relaxed">Led and mentored a team of research developers and data engineers, delivered innovative solutions for Wharton faculty. Served as technical manager for AI and LLM projects, including the CARGO lecture recall application and LLM-powered research tools. Consulted for large-scale studies and research initiatives.</div>
           </div>
-          <div class="bg-white p-6 rounded shadow border border-blue-100">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-              <span class="font-semibold text-lg text-gray-800">Senior IT Project Leader</span>
-              <span class="text-gray-500 md:ml-4">Oct 2017 – Aug 2021</span>
+          <div class="panel">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2 gap-1">
+              <span class="font-bold text-[var(--ink)]">Senior IT Project Leader</span>
+              <span class="text-[var(--faint)] text-sm md:ml-4">Oct 2017 – Aug 2021</span>
             </div>
-            <div class="text-sm text-gray-600">Designed and implemented project management and reporting tools. Promoted services through blogs and web presence. Built and maintained large social media and Amazon review datasets. Led cloud migration strategy for school-wide infrastructure.</div>
+            <div class="text-sm text-[var(--muted)] leading-relaxed">Designed and implemented project management and reporting tools. Promoted services through blogs and web presence. Built and maintained large social media and Amazon review datasets. Led cloud migration strategy for school-wide infrastructure.</div>
           </div>
-          <div class="bg-white p-6 rounded shadow border border-green-100">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-              <span class="font-semibold text-lg text-gray-800">Senior Research Programmer</span>
-              <span class="text-gray-500 md:ml-4">Jul 2015 – Oct 2017</span>
+          <div class="panel">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2 gap-1">
+              <span class="font-bold text-[var(--ink)]">Senior Research Programmer</span>
+              <span class="text-[var(--faint)] text-sm md:ml-4">Jul 2015 – Oct 2017</span>
             </div>
-            <div class="text-sm text-gray-600">Developed applications for advanced research, including modeling simulations. Mentored junior developers. Evaluated and recommended technology stacks and scientific libraries. Released open-source corpus classification library.</div>
+            <div class="text-sm text-[var(--muted)] leading-relaxed">Developed applications for advanced research, including modeling simulations. Mentored junior developers. Evaluated and recommended technology stacks and scientific libraries. Released open-source corpus classification library.</div>
           </div>
-          <div class="bg-white p-6 rounded shadow border border-gray-200">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-              <span class="font-semibold text-lg text-gray-800">Junior Research Programmer</span>
-              <span class="text-gray-500 md:ml-4">Apr 2013 – Jul 2015</span>
+          <div class="panel">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2 gap-1">
+              <span class="font-bold text-[var(--ink)]">Junior Research Programmer</span>
+              <span class="text-[var(--faint)] text-sm md:ml-4">Apr 2013 – Jul 2015</span>
             </div>
-            <div class="text-sm text-gray-600">Built specialized research applications, including a photography simulation tool. Migrated Google n-gram corpus to AWS S3 for efficient querying. Conducted topic modeling on large news corpora for election analysis.</div>
+            <div class="text-sm text-[var(--muted)] leading-relaxed">Built specialized research applications, including a photography simulation tool. Migrated Google n-gram corpus to AWS S3 for efficient querying. Conducted topic modeling on large news corpora for election analysis.</div>
           </div>
         </div>
       </section>
 
       <!-- Education -->
-      <section id="education" class="mt-12 text-left scroll-mt-24">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Education <span aria-label="graduation cap" title="Education">🎓</span></h3>
-        <div class="space-y-6">
-          <div class="bg-white p-6 rounded shadow border border-blue-100">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-              <span class="font-semibold text-lg text-gray-800">University of Pennsylvania | Wharton Executive Education</span>
-              <span class="text-gray-500 md:ml-4">2024</span>
+      <section id="education" class="mt-16 text-left scroll-mt-24">
+        <div class="sec"><h3 class="sec__label">education</h3><hr class="sec__rule" /></div>
+        <div class="space-y-5">
+          <div class="panel">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2 gap-1">
+              <span class="font-bold text-[var(--ink)]">University of Pennsylvania | Wharton Executive Education</span>
+              <span class="text-[var(--faint)] text-sm md:ml-4">2024</span>
             </div>
-            <div class="font-medium text-blue-700 mb-1">Certificate: Strategies for Accountable AI</div>
-            <div class="text-sm text-gray-600">Comprehensive roadmap for responsible, safe, and ethical AI implementation, covering accuracy, risk, transparency, fairness, bias, privacy, and legal compliance. Led by Wharton AI &amp; Analytics Initiative faculty.</div>
+            <div class="font-medium text-[var(--accent)] mb-1">Certificate: Strategies for Accountable AI</div>
+            <div class="text-sm text-[var(--muted)] leading-relaxed">Comprehensive roadmap for responsible, safe, and ethical AI implementation, covering accuracy, risk, transparency, fairness, bias, privacy, and legal compliance. Led by Wharton AI &amp; Analytics Initiative faculty.</div>
             <div class="mt-4 flex flex-col sm:flex-row sm:items-center gap-3">
               <a href={accountableAiCertificateUrl} target="_blank" rel="noopener noreferrer" aria-label="View full certificate image for Strategies for Accountable AI">
                 <img
                   src={accountableAiBadgeUrl}
                   alt="Strategies for Accountable AI credential badge"
-                  class="h-20 w-auto rounded border border-gray-200 bg-white p-1"
+                  class="h-20 w-auto border border-[var(--line-strong)] bg-[var(--surface-2)] p-1"
                   loading="lazy"
                 />
               </a>
-              <a href={accountableAiCertificateUrl} target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-blue-700 hover:underline">View full certificate</a>
+              <a href={accountableAiCertificateUrl} target="_blank" rel="noopener noreferrer" class="text-sm font-semibold">View full certificate</a>
             </div>
           </div>
-          <div class="bg-white p-6 rounded shadow border border-green-100">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-              <span class="font-semibold text-lg text-gray-800">University of Pennsylvania</span>
-              <span class="text-gray-500 md:ml-4">2010–2015</span>
+          <div class="panel">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2 gap-1">
+              <span class="font-bold text-[var(--ink)]">University of Pennsylvania</span>
+              <span class="text-[var(--faint)] text-sm md:ml-4">2010–2015</span>
             </div>
-            <div class="font-medium text-blue-700 mb-1">Masters of Computer and Information Technology (MCIT)</div>
-            <div class="text-sm text-gray-600">Courses in OOP, data structures, algorithms, computer architecture, databases, and web programming.</div>
+            <div class="font-medium text-[var(--accent)] mb-1">Masters of Computer and Information Technology (MCIT)</div>
+            <div class="text-sm text-[var(--muted)] leading-relaxed">Courses in OOP, data structures, algorithms, computer architecture, databases, and web programming.</div>
           </div>
-          <div class="bg-white p-6 rounded shadow border border-yellow-100">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-              <span class="font-semibold text-lg text-gray-800">Massachusetts College of Art</span>
-              <span class="text-gray-500 md:ml-4">2000–2004</span>
+          <div class="panel">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2 gap-1">
+              <span class="font-bold text-[var(--ink)]">Massachusetts College of Art</span>
+              <span class="text-[var(--faint)] text-sm md:ml-4">2000–2004</span>
             </div>
-            <div class="font-medium text-blue-700 mb-1">B.F.A Studio for Interrelated Media</div>
-            <div class="text-sm text-gray-600">Graduated with honors. Focused on video editing, event coordination, electronics, and art history.</div>
+            <div class="font-medium text-[var(--accent)] mb-1">B.F.A Studio for Interrelated Media</div>
+            <div class="text-sm text-[var(--muted)] leading-relaxed">Graduated with honors. Focused on video editing, event coordination, electronics, and art history.</div>
           </div>
         </div>
       </section>
 
       <!-- Skills -->
-      <section id="technologies" class="mt-12 text-left scroll-mt-24">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Skills <span aria-label="gear" title="Skills">⚙️</span></h3>
-        <div class="bg-white p-6 rounded shadow border border-gray-200 space-y-6">
+      <section id="technologies" class="mt-16 text-left scroll-mt-24">
+        <div class="sec"><h3 class="sec__label">skills</h3><hr class="sec__rule" /></div>
+        <div class="panel space-y-6">
           <div>
-            <h4 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">AI &amp; Machine Learning</h4>
+            <h4 class="text-xs font-bold uppercase tracking-widest text-[var(--faint)] mb-3">AI &amp; Machine Learning</h4>
             <div class="flex flex-wrap gap-2">
-              <span class="tech-tag" data-emoji="🧠">LLMs</span>
-              <span class="tech-tag" data-emoji="🤖">Claude</span>
-              <span class="tech-tag" data-emoji="🌐">OpenAI</span>
-              <span class="tech-tag" data-emoji="✨">Gemini</span>
-              <span class="tech-tag" data-emoji="☁️">AWS Bedrock</span>
-              <span class="tech-tag" data-emoji="📦">RAG</span>
-              <span class="tech-tag" data-emoji="🔍">Semantic Search</span>
-              <span class="tech-tag" data-emoji="🎼">AI Orchestration</span>
-              <span class="tech-tag" data-emoji="⚡">Batch Inference</span>
-              <span class="tech-tag" data-emoji="🎛️">Fine Tuning</span>
+              <span class="tag">LLMs</span>
+              <span class="tag">Claude</span>
+              <span class="tag">OpenAI</span>
+              <span class="tag">Gemini</span>
+              <span class="tag">AWS Bedrock</span>
+              <span class="tag">RAG</span>
+              <span class="tag">Semantic Search</span>
+              <span class="tag">AI Orchestration</span>
+              <span class="tag">Batch Inference</span>
+              <span class="tag">Fine Tuning</span>
             </div>
           </div>
           <div>
-            <h4 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Frameworks &amp; Tools</h4>
+            <h4 class="text-xs font-bold uppercase tracking-widest text-[var(--faint)] mb-3">Frameworks &amp; Tools</h4>
             <div class="flex flex-wrap gap-2">
-              <span class="tech-tag" data-emoji="🐍">Python</span>
-              <span class="tech-tag" data-emoji="🐼">Pandas</span>
-              <span class="tech-tag" data-emoji="🔢">NumPy</span>
-              <span class="tech-tag" data-emoji="📊">scikit-learn</span>
-              <span class="tech-tag" data-emoji="📓">Jupyter</span>
-              <span class="tech-tag" data-emoji="🧪">Flask</span>
-              <span class="tech-tag" data-emoji="🌿">Django</span>
-              <span class="tech-tag" data-emoji="⚛️">React</span>
-              <span class="tech-tag" data-emoji="🟢">Node.js</span>
-              <span class="tech-tag" data-emoji="🐘">PostgreSQL</span>
-              <span class="tech-tag" data-emoji="🔎">Elasticsearch</span>
-              <span class="tech-tag" data-emoji="🔴">Redis</span>
-              <span class="tech-tag" data-emoji="🔥">Spark</span>
-              <span class="tech-tag" data-emoji="🔧">OpenAI SDK</span>
-              <span class="tech-tag" data-emoji="🔗">LangChain</span>
-              <span class="tech-tag" data-emoji="🕸️">LangGraph</span>
-              <span class="tech-tag" data-emoji="🌲">Pinecone</span>
-              <span class="tech-tag" data-emoji="🗃️">Neo4j</span>
-              <span class="tech-tag" data-emoji="🗂️">Atlassian</span>
-              <span class="tech-tag" data-emoji="🏗️">Terraform</span>
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">scikit-learn</span>
+              <span class="tag">Jupyter</span>
+              <span class="tag">Flask</span>
+              <span class="tag">Django</span>
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Elasticsearch</span>
+              <span class="tag">Redis</span>
+              <span class="tag">Spark</span>
+              <span class="tag">OpenAI SDK</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">LangGraph</span>
+              <span class="tag">Pinecone</span>
+              <span class="tag">Neo4j</span>
+              <span class="tag">Atlassian</span>
+              <span class="tag">Terraform</span>
             </div>
           </div>
           <div>
-            <h4 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Engineering &amp; Delivery</h4>
+            <h4 class="text-xs font-bold uppercase tracking-widest text-[var(--faint)] mb-3">Engineering &amp; Delivery</h4>
             <div class="flex flex-wrap gap-2">
-              <span class="tech-tag" data-emoji="💻">Programming</span>
-              <span class="tech-tag" data-emoji="🛠️">Application Development</span>
-              <span class="tech-tag" data-emoji="🗄️">Databases</span>
-              <span class="tech-tag" data-emoji="🔌">APIs</span>
-              <span class="tech-tag" data-emoji="💻">Agentic Coding</span>
-              <span class="tech-tag" data-emoji="🔁">CI/CD</span>
+              <span class="tag">Programming</span>
+              <span class="tag">Application Development</span>
+              <span class="tag">Databases</span>
+              <span class="tag">APIs</span>
+              <span class="tag">Agentic Coding</span>
+              <span class="tag">CI/CD</span>
             </div>
           </div>
           <div>
-            <h4 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Management &amp; Leadership</h4>
+            <h4 class="text-xs font-bold uppercase tracking-widest text-[var(--faint)] mb-3">Management &amp; Leadership</h4>
             <div class="flex flex-wrap gap-2">
-              <span class="tech-tag" data-emoji="📋">Project Management</span>
-              <span class="tech-tag" data-emoji="🤝">Team Leadership</span>
-              <span class="tech-tag" data-emoji="🎯">Strategic Planning</span>
-              <span class="tech-tag" data-emoji="🗣️">Stakeholder Engagement</span>
-              <span class="tech-tag" data-emoji="🌱">Mentorship</span>
+              <span class="tag">Project Management</span>
+              <span class="tag">Team Leadership</span>
+              <span class="tag">Strategic Planning</span>
+              <span class="tag">Stakeholder Engagement</span>
+              <span class="tag">Mentorship</span>
             </div>
           </div>
           <div>
-            <h4 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Governance &amp; Policy</h4>
+            <h4 class="text-xs font-bold uppercase tracking-widest text-[var(--faint)] mb-3">Governance &amp; Policy</h4>
             <div class="flex flex-wrap gap-2">
-              <span class="tech-tag" data-emoji="⚖️">AI Governance</span>
-              <span class="tech-tag" data-emoji="🏛️">AI Accountability</span>
+              <span class="tag">AI Governance</span>
+              <span class="tag">AI Accountability</span>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Acknowledgments -->
-      <section id="acknowledgments" class="mt-12 text-left scroll-mt-24">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Acknowledgments <span aria-label="books" title="Acknowledgments">📚</span></h3>
-        <div class="bg-white p-6 rounded shadow border border-gray-200">
-          <ul class="list-disc pl-6 space-y-2 text-gray-800">
+      <section id="acknowledgments" class="mt-16 text-left scroll-mt-24">
+        <div class="sec"><h3 class="sec__label">references</h3><hr class="sec__rule" /></div>
+        <div class="panel">
+          <ul class="ref-list space-y-2 text-sm text-[var(--muted)]">
             <li>Melumad, Shiri, and Jin Ho Yun. "Experimental Evidence of the Effects of Large Language Models versus Web Search on Depth of Learning." <em>Available at SSRN 5104064</em> (2025)<span style="display:inline-block; vertical-align:middle; margin-left:6px;"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5104064" target="_blank" rel="noopener" aria-label="External link" style="font-size:1em; line-height:1; vertical-align:middle; display:inline-block;" set:html={extLinkSvg}></a></span>.</li>
             <li>García Jimeno, Camilo, and Pinar Yildirim. "Persuasion and dissuasion in political campaigns: Political communication and media coverage in senate races." <em>Working Paper, No. WP 2024-04</em> (2024)<span style="display:inline-block; vertical-align:middle; margin-left:6px;"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4723453" target="_blank" rel="noopener" aria-label="External link" style="font-size:1em; line-height:1; vertical-align:middle; display:inline-block;" set:html={extLinkSvg}></a></span>.</li>
             <li>Yuan, Yihao. "Exclusive Contracts in the Video Streaming Market." <em>Proceedings of the 25th ACM Conference on Economics and Computation</em>. 2024<span style="display:inline-block; vertical-align:middle; margin-left:6px;"><a href="https://dl.acm.org/doi/10.1145/3670865.3673443" target="_blank" rel="noopener" aria-label="External link" style="font-size:1em; line-height:1; vertical-align:middle; display:inline-block;" set:html={extLinkSvg}></a></span>.</li>
@@ -252,61 +251,27 @@ const accountableAiCertificateUrl = 'https://api.accredible.com/v1/frontend/cred
 </SiteLayout>
 
 <style>
-  :root {
-    --tag-hue: 140;
+  .ref-list {
+    list-style: none;
+    padding-left: 1.25rem;
   }
-
-  .tech-tag {
+  .ref-list li {
     position: relative;
-    overflow: hidden;
-    background: linear-gradient(135deg,
-      hsl(var(--tag-hue), 22%, 94%),
-      hsl(calc(var(--tag-hue) + 14), 10%, 98%)
-    );
-    border: 1px solid hsl(var(--tag-hue), 14%, 88%);
-    color: hsl(var(--tag-hue), 22%, 32%);
-    border-radius: 0.25rem;
-    padding: 0.25rem 0.75rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    display: inline-block;
-    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
   }
-
-  .tech-tag::after {
-    content: attr(data-emoji);
+  .ref-list li::before {
+    content: '-';
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(0.85);
-    font-size: 1.05rem;
-    line-height: 1;
-    color: #111827;
-    opacity: 0;
-    z-index: 1;
-    pointer-events: none;
-    transition: opacity 0.22s ease, transform 0.22s ease;
+    left: -1.25rem;
+    color: var(--accent);
   }
-
-  .tech-tag:hover::after {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  .tech-tag:hover {
-    color: hsl(var(--tag-hue) 22% 32% / 10%);
+  .ref-list em {
+    color: var(--ink);
+    font-style: italic;
   }
 </style>
 
 <script>
-  // Scroll to Top + tag hue shift on scroll
-  const scrollTopBtn = document.getElementById('scrollTopBtn');
-  window.addEventListener('scroll', function () {
-    const maxScroll = document.body.scrollHeight - window.innerHeight;
-    const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
-    document.documentElement.style.setProperty('--tag-hue', (140 + progress * 20).toFixed(1));
-  });
-
   // History fact for today
   async function showTodayHistoryFact() {
     try {

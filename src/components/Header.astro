@@ -5,49 +5,49 @@ interface Props {
   activePage?: string;
 }
 const { activePage } = Astro.props;
+
+const navItems = [
+  { href: '/#about-me', label: 'about', scroll: true },
+  { href: '/#work-experience', label: 'work', scroll: true },
+  { href: '/#education', label: 'edu', scroll: true },
+  { href: '/#technologies', label: 'skills', scroll: true },
+  { href: '/blog/', label: 'blog', scroll: false },
+  { href: '/#acknowledgments', label: 'refs', scroll: true },
+];
 ---
 
 <header class="site-header">
-  <div class="container mx-auto px-4 py-4 sm:py-5 flex justify-between items-center">
+  <div class="container mx-auto px-4 py-5 sm:py-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
     <div>
-      <h1 class="text-3xl font-extrabold text-gray-800">Shawn Zamechek</h1>
-      <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
-        <a href="mailto:shawn@zamechek.com" class="text-sm text-blue-700 hover:underline">shawn@zamechek.com</a>
+      <div class="prompt text-xs sm:text-sm mb-1"><b>shawn@zamechek</b>:~$ whoami</div>
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-[var(--ink)] tracking-tight">Shawn Zamechek</h1>
+      <div class="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+        <a href="mailto:shawn@zamechek.com">shawn@zamechek.com</a>
+        <span class="text-[var(--faint)]">·</span>
         <SocialLinks showLabels={false} className="gap-x-2" />
       </div>
-      <div id="time-rhyme" class="text-xs text-gray-500 mt-1"></div>
+      <div id="time-rhyme" class="text-xs text-[var(--faint)] mt-1"></div>
     </div>
-    <nav>
-      <div class="relative">
-        <button
-          id="mobile-menu-toggle"
-          aria-label="Toggle navigation menu"
-          aria-controls="mobile-menu"
-          aria-expanded="false"
-          class="md:hidden flex items-center justify-center w-12 h-12 rounded-full text-gray-700 focus:outline-none focus:ring bg-white shadow transition-all duration-900"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28">
-            <rect class="hamburger-bar top" x="6" y="11" width="20" height="3" rx="1.5" />
-            <rect class="hamburger-bar bottom" x="6" y="18" width="20" height="3" rx="1.5" />
-          </svg>
-        </button>
-        <nav
-          id="mobile-menu"
-          class="absolute md:static right-0 top-12 bg-white md:bg-transparent shadow md:shadow-none rounded md:rounded-none border md:border-none w-48 md:w-auto z-50 md:flex md:space-x-6 md:items-center hidden"
-        >
-          <a href="/#about-me" class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">About Me</a>
-          <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
-          <a href="/#work-experience" class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Work Experience</a>
-          <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
-          <a href="/#education" class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Education</a>
-          <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
-          <a href="/#technologies" class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Skills</a>
-          <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
-          <a href="/blog/" class="block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Blog</a>
-          <span class="hidden md:inline-block text-gray-400 mx-1">|</span>
-          <a href="/#acknowledgments" class="scroll-link block md:inline-block px-2 py-1 text-gray-700 font-semibold tracking-wide text-sm relative nav-underline">Acknowledgments</a>
-        </nav>
-      </div>
+
+    <nav class="sm:text-right">
+      <button
+        id="mobile-menu-toggle"
+        aria-label="Toggle navigation menu"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        class="md:hidden nav-link text-sm"
+      >menu</button>
+      <nav
+        id="mobile-menu"
+        class="absolute md:static right-4 top-16 bg-[var(--surface)] md:bg-transparent border md:border-none border-[var(--line-strong)] p-3 md:p-0 z-50 md:flex md:flex-wrap md:gap-x-3 md:justify-end w-44 md:w-auto hidden"
+      >
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class:list={['nav-link block md:inline-block text-sm py-1 md:py-0', item.scroll && 'scroll-link']}
+          >{item.label}</a>
+        ))}
+      </nav>
     </nav>
   </div>
 </header>
@@ -55,59 +55,33 @@ const { activePage } = Astro.props;
 <style>
   .site-header {
     position: relative;
-    background: rgba(254, 252, 232, 0.94);
-    box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04), 0 8px 20px -20px rgba(15, 23, 42, 0.55);
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
   }
 
-  .site-header::after {
-    content: '';
-    position: absolute;
-    left: 1rem;
-    right: 1rem;
-    bottom: 0;
-    height: 1px;
-    background: linear-gradient(90deg,
-        rgba(148, 163, 184, 0),
-        rgba(148, 163, 184, 0.55),
-        rgba(148, 163, 184, 0));
+  .nav-link {
+    color: var(--muted);
+    letter-spacing: 0.02em;
+    transition: color 0.15s ease;
   }
-
-  .nav-underline::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #15803d, #22c55e);
-    border-radius: 2px;
-    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    margin: 0 auto;
+  .nav-link::before {
+    content: '[';
+    color: var(--line-strong);
   }
-
-  .nav-underline:hover::after,
-  .nav-underline:focus::after {
-    width: 80%;
+  .nav-link::after {
+    content: ']';
+    color: var(--line-strong);
   }
-
-  /* Hamburger menu morph animation - 2 line version */
-  .hamburger-bar {
-    fill: currentColor;
-    transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  .nav-link:hover,
+  .nav-link:focus {
+    color: var(--accent);
+    text-decoration: none;
   }
-
-  .hamburger-bar.top {
-    transform-origin: 16px 12.5px;
-  }
-
-  .hamburger-bar.bottom {
-    transform-origin: 16px 19.5px;
-  }
-
-  :global(.hamburger-open) .hamburger-bar.top {
-    transform: rotate(45deg) translateY(3.5px);
-  }
-
-  :global(.hamburger-open) .hamburger-bar.bottom {
-    transform: rotate(-45deg) translateY(-3.5px);
+  .nav-link:hover::before,
+  .nav-link:hover::after,
+  .nav-link:focus::before,
+  .nav-link:focus::after {
+    color: var(--accent);
   }
 </style>
 
@@ -118,7 +92,6 @@ const { activePage } = Astro.props;
   function closeMobileMenu() {
     if (!mobileMenu || !mobileMenuToggle) return;
     mobileMenu.classList.add('hidden');
-    mobileMenuToggle.classList.remove('hamburger-open');
     mobileMenuToggle.setAttribute('aria-expanded', 'false');
   }
 
@@ -126,7 +99,6 @@ const { activePage } = Astro.props;
     mobileMenuToggle.addEventListener('click', function () {
       const isHidden = mobileMenu.classList.contains('hidden');
       mobileMenu.classList.toggle('hidden');
-      mobileMenuToggle.classList.toggle('hamburger-open', isHidden);
       mobileMenuToggle.setAttribute('aria-expanded', String(isHidden));
     });
   }

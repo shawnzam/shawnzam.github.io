@@ -327,5 +327,10 @@
       if (startY !== null && e.touches[0].clientY - startY > 45) reveal();
     }, { passive: true });
     window.addEventListener('touchend', () => { startY = null; });
+
+    // Explicit triggers: the rainbow top-bar and the scroll-to-top button
+    for (const sel of ['.vhs-bar', '#scrollTopBtn']) {
+      document.querySelector(sel)?.addEventListener('click', () => reveal());
+    }
   }
 </script>

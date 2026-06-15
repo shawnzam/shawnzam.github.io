@@ -99,9 +99,22 @@
 @layer components {
   /* Global VHS stripe along the very top of the viewport */
   .vhs-bar {
+    display: block;
     height: 4px;
     width: 100%;
+    padding: 0;
+    border: none;
     background: var(--stripe);
+    cursor: pointer;
+    transition: filter 0.2s ease, height 0.2s ease;
+  }
+  .vhs-bar:hover {
+    filter: brightness(1.12) saturate(1.1);
+    height: 6px;
+  }
+  .vhs-bar:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
   }
 
   /* ---- ASCII panel : a TUI window / cassette-spine label ---- */

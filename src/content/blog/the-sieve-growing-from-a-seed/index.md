@@ -1,8 +1,8 @@
 ---
-title: "I Started With 12 Names. A Sieve Found the Rest."
+title: "I Started With 12 Names. An LLM Sieve Found the Rest."
 published: 2026-06-25
 type: essay
-description: "How a 'cycle of sieves' — an API crawl plus an LLM used only as a filter — grew a 12-name seed into a verifiable map of who actually made indie records. The site is 2inch.fm."
+description: "I seeded a map of indie record-makers with 12 names I trusted, then let an LLM sieve (filter, never author) grow it to 469 verifiable nodes. Live at 2inch.fm."
 ---
 
 I wanted to map who *actually* made the indie and post-rock records I grew up on — not the bands, the people behind the glass. The engineers, the producers, the studios. I didn't start with a database or a spreadsheet. I started with twelve names I'd vouch for without thinking — Steve Albini, John McEntire, Bob Weston, and nine more like them. That's the whole seed. A dozen people I trusted, typed by hand. Everything else — 469 nodes, 620 album credits, all live at **[2inch.fm](https://2inch.fm)** — grew out of those twelve through a process I keep calling **the sieve**.

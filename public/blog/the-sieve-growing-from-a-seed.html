@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The cycle of sieves</title>
+<style>
+  :root{
+    --bg:#f1eee4; --surface:#faf8f1; --ink:#1c1b16; --muted:#6f6c5f; --faint:#908c7d;
+    --line:#d2cdbc; --line-strong:#b6b09c; --accent:#156b62; --accent-ink:#0d4f48;
+    --rust:#a8432c;
+    --vhs-red:#e23b34; --vhs-orange:#ef8a2b; --vhs-yellow:#efc433; --vhs-green:#3aa75a;
+    --vhs-cyan:#2ba2c2; --vhs-blue:#2f6fb0; --vhs-magenta:#c8479b;
+    --stripe:linear-gradient(90deg,var(--vhs-red) 0 14.28%,var(--vhs-orange) 0 28.56%,
+      var(--vhs-yellow) 0 42.84%,var(--vhs-green) 0 57.12%,var(--vhs-cyan) 0 71.4%,
+      var(--vhs-blue) 0 85.68%,var(--vhs-magenta) 0 100%);
+    --mono:'JetBrains Mono',ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16160f; --surface:#1d1d15; --ink:#e9e6d8; --muted:#9a9784; --faint:#6f6c5c;
+      --line:#353427; --line-strong:#4b4937; --accent:#54c7ad; --accent-ink:#7ad9c2; --rust:#e08163; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{background:var(--bg);color:var(--ink);font-family:var(--mono);
+    display:flex;align-items:center;justify-content:center;padding:18px;}
+  .card{width:100%;max-width:880px;border:1px solid var(--line-strong);background:var(--surface);}
+  .spine{height:5px;background:var(--stripe);}
+  .pad{padding:22px 22px 18px;}
+  .head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    border-bottom:1px dashed var(--line-strong);padding-bottom:12px;margin-bottom:18px;}
+  .head h1{font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;}
+  .head .sub{font-size:11px;color:var(--muted);}
+  .head .sub b{color:var(--accent);}
+  .flow{display:grid;grid-template-columns:1fr;gap:9px;}
+  .row{display:flex;align-items:center;gap:12px;}
+  .box{flex:1;border:1px solid var(--line-strong);background:var(--bg);padding:9px 12px;}
+  .box .t{font-size:12px;font-weight:700;letter-spacing:.02em;}
+  .box .d{font-size:10px;color:var(--muted);margin-top:2px;}
+  .box .t .k{color:var(--accent);}
+  .box.llm{border-color:var(--rust);background:color-mix(in srgb,var(--rust) 7%,var(--bg));}
+  .box.llm .t .k{color:var(--rust);}
+  .box.merge{background:var(--ink);}
+  .box.merge .t{color:var(--bg);}
+  .box.merge .d{color:var(--faint);}
+  .tag{flex:0 0 26px;font-size:10px;color:var(--faint);text-align:right;letter-spacing:.04em;}
+  .arrow{color:var(--faint);text-align:center;font-size:13px;line-height:.6;padding-left:26px;}
+  .loop{display:flex;align-items:center;gap:10px;color:var(--rust);font-size:11px;
+    border-top:1px dashed var(--line-strong);margin-top:14px;padding-top:12px;}
+  .loop .arc{font-weight:700;letter-spacing:.04em;}
+  .foot{display:flex;gap:20px;flex-wrap:wrap;margin-top:16px;border-top:1px solid var(--line);
+    padding-top:14px;}
+  .stat .n{font-size:22px;font-weight:700;line-height:1;display:block;}
+  .stat .l{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;}
+  .stat.core .n{color:var(--ink);}
+  .stat.grown .n{color:var(--accent);}
+  .stat.llm .n{color:var(--rust);}
+  .key{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:10px;color:var(--muted);}
+  .key i{display:inline-block;width:9px;height:9px;margin-right:5px;vertical-align:middle;border:1px solid var(--line-strong);}
+  .key .det{background:var(--bg);}
+  .key .ai{background:var(--rust);border-color:var(--rust);}
+  .key .store{background:var(--ink);border-color:var(--ink);}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="spine"></div>
+    <div class="pad">
+      <div class="head">
+        <h1>The cycle of sieves</h1>
+        <div class="sub">the AI is a <b>filter</b>, never a source · seed → crawl → sieve → merge → repeat</div>
+      </div>
+
+      <div class="flow">
+        <div class="row">
+          <span class="tag"></span>
+          <div class="box"><div class="t"><span class="k">SEED</span> — 12 names I already trusted</div><div class="d">the engineers I could vouch for by hand</div></div>
+        </div>
+        <div class="arrow">▼</div>
+        <div class="row">
+          <span class="tag"></span>
+          <div class="box"><div class="t"><span class="k">CRAWL</span> · MusicBrainz</div><div class="d">deterministic parse — no AI reads the data</div></div>
+        </div>
+        <div class="arrow">▼</div>
+        <div class="row">
+          <span class="tag">①</span>
+          <div class="box"><div class="t"><span class="k">SIEVE</span> · year window 1995–2003</div><div class="d">code-level scope filter · drops out-of-era credits</div></div>
+        </div>
+        <div class="arrow">▼</div>
+        <div class="row">
+          <span class="tag">②</span>
+          <div class="box llm"><div class="t"><span class="k">SIEVE</span> · notability · Claude</div><div class="d">the only place the model touches data · drops junk &amp; unknowns</div></div>
+        </div>
+        <div class="arrow">▼</div>
+        <div class="row">
+          <span class="tag">③</span>
+          <div class="box"><div class="t"><span class="k">SIEVE</span> · dedup vs the index</div><div class="d">drops anything already held</div></div>
+        </div>
+        <div class="arrow">▼</div>
+        <div class="row">
+          <span class="tag"></span>
+          <div class="box merge"><div class="t">MERGE → data.json · tagged src:mb</div><div class="d">every survivor deep-links to its source record</div></div>
+        </div>
+      </div>
+
+      <div class="loop">
+        <span class="arc">↻</span>
+        <span>then Claude <b>nominates more hubs</b> to seed the next round — proposing search terms, never facts</span>
+      </div>
+
+      <div class="foot">
+        <div class="stat core"><span class="n">12</span><span class="l">hand-picked seed</span></div>
+        <div class="stat grown"><span class="n">469</span><span class="l">nodes after the sieve</span></div>
+        <div class="stat llm"><span class="n">620</span><span class="l">album credits · all traceable</span></div>
+      </div>
+
+      <div class="key">
+        <span><i class="det"></i>deterministic code — no AI</span>
+        <span><i class="ai"></i>the model acts here</span>
+        <span><i class="store"></i>the stored index</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
